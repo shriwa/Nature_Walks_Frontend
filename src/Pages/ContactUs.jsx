@@ -2,158 +2,112 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <section class="py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 grid-cols-1">
-          <div class="lg:mb-0 mb-10">
-            <div class="group w-full h-full">
-              <div class="relative h-full">
-                <img
-                  src="https://pagedone.io/asset/uploads/1696488602.png"
-                  alt="ContactUs tailwind section"
-                  class="w-full h-full lg:rounded-l-2xl rounded-2xl bg-blend-multiply bg-indigo-700 object-cover"
-                />
-                <h1 class="font-manrope text-white text-4xl font-bold leading-10 absolute top-11 left-11">
-                  Contact us
-                </h1>
-                <div class="absolute bottom-0 w-full lg:p-11 p-5">
-                  <div class="bg-white rounded-lg p-6 block">
-                    <a href="javascript:;" class="flex items-center mb-6">
-                      <svg
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M22.3092 18.3098C22.0157 18.198 21.8689 18.1421 21.7145 18.1287C21.56 18.1154 21.4058 18.1453 21.0975 18.205L17.8126 18.8416C17.4392 18.9139 17.2525 18.9501 17.0616 18.9206C16.8707 18.891 16.7141 18.8058 16.4008 18.6353C13.8644 17.2551 12.1853 15.6617 11.1192 13.3695C10.9964 13.1055 10.935 12.9735 10.9133 12.8017C10.8917 12.6298 10.9218 12.4684 10.982 12.1456L11.6196 8.72559C11.6759 8.42342 11.7041 8.27233 11.6908 8.12115C11.6775 7.96998 11.6234 7.82612 11.5153 7.5384L10.6314 5.18758C10.37 4.49217 10.2392 4.14447 9.95437 3.94723C9.6695 3.75 9.29804 3.75 8.5551 3.75H5.85778C4.58478 3.75 3.58264 4.8018 3.77336 6.06012C4.24735 9.20085 5.64674 14.8966 9.73544 18.9853C14.0295 23.2794 20.2151 25.1426 23.6187 25.884C24.9335 26.1696 26.0993 25.1448 26.0993 23.7985V21.2824C26.0993 20.5428 26.0993 20.173 25.9034 19.8888C25.7076 19.6046 25.362 19.4729 24.6708 19.2096L22.3092 18.3098Z"
-                          stroke="#4F46E5"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <h5 class="text-black text-base font-normal leading-6 ml-5">
-                        470-601-1911
-                      </h5>
-                    </a>
-                    <a href="javascript:;" class="flex items-center mb-6">
-                      <svg
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2.81501 8.75L10.1985 13.6191C12.8358 15.2015 14.1544 15.9927 15.6032 15.9582C17.0519 15.9237 18.3315 15.0707 20.8905 13.3647L27.185 8.75M12.5 25H17.5C22.214 25 24.5711 25 26.0355 23.5355C27.5 22.0711 27.5 19.714 27.5 15C27.5 10.286 27.5 7.92893 26.0355 6.46447C24.5711 5 22.214 5 17.5 5H12.5C7.78595 5 5.42893 5 3.96447 6.46447C2.5 7.92893 2.5 10.286 2.5 15C2.5 19.714 2.5 22.0711 3.96447 23.5355C5.42893 25 7.78595 25 12.5 25Z"
-                          stroke="#4F46E5"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                      <h5 class="text-black text-base font-normal leading-6 ml-5">
-                        Pagedone1234@gmail.com
-                      </h5>
-                    </a>
-                    <a href="javascript:;" class="flex items-center">
-                      <svg
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M25 12.9169C25 17.716 21.1939 21.5832 18.2779 24.9828C16.8385 26.6609 16.1188 27.5 15 27.5C13.8812 27.5 13.1615 26.6609 11.7221 24.9828C8.80612 21.5832 5 17.716 5 12.9169C5 10.1542 6.05357 7.5046 7.92893 5.55105C9.8043 3.59749 12.3478 2.5 15 2.5C17.6522 2.5 20.1957 3.59749 22.0711 5.55105C23.9464 7.5046 25 10.1542 25 12.9169Z"
-                          stroke="#4F46E5"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M17.5 11.6148C17.5 13.0531 16.3807 14.219 15 14.219C13.6193 14.219 12.5 13.0531 12.5 11.6148C12.5 10.1765 13.6193 9.01058 15 9.01058C16.3807 9.01058 17.5 10.1765 17.5 11.6148Z"
-                          stroke="#4F46E5"
-                          stroke-width="2"
-                        />
-                      </svg>
-                      <h5 class="text-black text-base font-normal leading-6 ml-5">
-                        654 Sycamore Avenue, Meadowville, WA 76543
-                      </h5>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div
+      id="contact"
+      class="grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 mb-8 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-primary before:h-full max-md:before:hidden"
+    >
+      <div>
+        <h2 class="text-primary text-3xl font-extrabold">Get In Touch</h2>
+        <p class="text-sm text-gray-500 mt-4 leading-relaxed">
+          Have a specific inquiry or looking to explore new opportunities? Our
+          experienced team is ready to engage with you.
+        </p>
+
+        <form>
+          <div class="space-y-4 mt-8">
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none"
+            />
+
+            <input
+              type="number"
+              placeholder="Phone No."
+              class="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none"
+            />
+
+            <input
+              type="email"
+              placeholder="Email"
+              class="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none"
+            />
+
+            <textarea
+              placeholder="Write Message"
+              class="px-2 pt-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none"
+            ></textarea>
           </div>
 
-          <div class="bg-gray-50 p-5 lg:p-11 lg:rounded-r-2xl rounded-2xl">
-            <h2 class="text-indigo-600 font-manrope text-4xl font-semibold leading-10 mb-11">
-              Send Us A Message
-            </h2>
-            <input
-              type="text"
-              class="w-full h-12 text-gray-600 placeholder-gray-400  shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
-              placeholder="Name"
-            />
-            <input
-              type="text"
-              class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
-              placeholder="Email"
-            />
-            <input
-              type="text"
-              class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
-              placeholder="Phone"
-            />
-            <div class="mb-10">
-              <h4 class="text-gray-500 text-lg font-normal leading-7 mb-4">
-                Preferred method of communication
-              </h4>
-              <div class="flex">
-                <div class="flex items-center mr-11">
-                  <input
-                    id="radio-group-1"
-                    type="radio"
-                    name="radio-group"
-                    class="hidden checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"
-                  />
-                  <label
-                    for="radio-group-1"
-                    class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6"
-                  >
-                    <span class="border border-gray-300 rounded-full mr-2 w-4 h-4  ml-2 "></span>{" "}
-                    Email
-                  </label>
-                </div>
-                <div class="flex items-center">
-                  <input
-                    id="radio-group-2"
-                    type="radio"
-                    name="radio-group"
-                    class="hidden checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"
-                  />
-                  <label
-                    for="radio-group-2"
-                    class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6"
-                  >
-                    <span class="border border-gray-300  rounded-full mr-2 w-4 h-4  ml-2 "></span>{" "}
-                    Phone
-                  </label>
-                </div>
-              </div>
-            </div>
-            <input
-              type="text"
-              class="w-full h-12 text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
-              placeholder="Message"
-            />
-            <button class="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 hover:bg-indigo-800 bg-indigo-600 shadow-sm">
-              Send
-            </button>
-          </div>
-        </div>
+          <button
+            type="button"
+            class="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-primary hover:bg-secondary transition-all duration-700 ease-in-out  text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              fill="#fff"
+              class="mr-2"
+              viewBox="0 0 548.244 548.244"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
+                clip-rule="evenodd"
+                data-original="#000000"
+              />
+            </svg>
+            Send Message
+          </button>
+        </form>
+
+        <ul class="mt-4 flex flex-wrap justify-center gap-6">
+          <li class="flex items-center text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              fill="currentColor"
+              viewBox="0 0 479.058 479.058"
+            >
+              <path
+                d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
+                data-original="#000000"
+              />
+            </svg>
+            <a href="javascript:void(0)" class="text-sm ml-4">
+              <strong>info@example.com</strong>
+            </a>
+          </li>
+          <li class="flex items-center text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              fill="currentColor"
+              viewBox="0 0 482.6 482.6"
+            >
+              <path
+                d="M98.339 320.8c47.6 56.9 104.9 101.7 170.3 133.4 24.9 11.8 58.2 25.8 95.3 28.2 2.3.1 4.5.2 6.8.2 24.9 0 44.9-8.6 61.2-26.3.1-.1.3-.3.4-.5 5.8-7 12.4-13.3 19.3-20 4.7-4.5 9.5-9.2 14.1-14 21.3-22.2 21.3-50.4-.2-71.9l-60.1-60.1c-10.2-10.6-22.4-16.2-35.2-16.2-12.8 0-25.1 5.6-35.6 16.1l-35.8 35.8c-3.3-1.9-6.7-3.6-9.9-5.2-4-2-7.7-3.9-11-6-32.6-20.7-62.2-47.7-90.5-82.4-14.3-18.1-23.9-33.3-30.6-48.8 9.4-8.5 18.2-17.4 26.7-26.1 3-3.1 6.1-6.2 9.2-9.3 10.8-10.8 16.6-23.3 16.6-36s-5.7-25.2-16.6-36l-29.8-29.8c-3.5-3.5-6.8-6.9-10.2-10.4-6.6-6.8-13.5-13.8-20.3-20.1-10.3-10.1-22.4-15.4-35.2-15.4-12.7 0-24.9 5.3-35.6 15.5l-37.4 37.4c-13.6 13.6-21.3 30.1-22.9 49.2-1.9 23.9 2.5 49.3 13.9 80 17.5 47.5 43.9 91.6 83.1 138.7zm-72.6-216.6c1.2-13.3 6.3-24.4 15.9-34l37.2-37.2c5.8-5.6 12.2-8.5 18.4-8.5 6.1 0 12.3 2.9 18 8.7 6.7 6.2 13 12.7 19.8 19.6 3.4 3.5 6.9 7 10.4 10.6l29.8 29.8c6.2 6.2 9.4 12.5 9.4 18.7s-3.2 12.5-9.4 18.7c-3.1 3.1-6.2 6.3-9.3 9.4-9.3 9.4-18 18.3-27.6 26.8l-.5.5c-8.3 8.3-7 16.2-5 22.2.1.3.2.5.3.8 7.7 18.5 18.4 36.1 35.1 57.1 30 37 61.6 65.7 96.4 87.8 4.3 2.8 8.9 5 13.2 7.2 4 2 7.7 3.9 11 6 .4.2.7.4 1.1.6 3.3 1.7 6.5 2.5 9.7 2.5 8 0 13.2-5.1 14.9-6.8l37.4-37.4c5.8-5.8 12.1-8.9 18.3-8.9 7.6 0 13.8 4.7 17.7 8.9l60.3 60.2c12 12 11.9 25-.3 37.7-4.2 4.5-8.6 8.8-13.3 13.3-7 6.8-14.3 13.8-20.9 21.7-11.5 12.4-25.2 18.2-42.9 18.2-1.7 0-3.5-.1-5.2-.2-32.8-2.1-63.3-14.9-86.2-25.8-62.2-30.1-116.8-72.8-162.1-127-37.3-44.9-62.4-86.7-79-131.5-10.3-27.5-14.2-49.6-12.6-69.7z"
+                data-original="#000000"
+              ></path>
+            </svg>
+            <a href="javascript:void(0)" class="text-sm ml-4">
+              <strong>+158 996 888</strong>
+            </a>
+          </li>
+        </ul>
       </div>
-    </section>
+      <div class="z-10 relative h-full max-md:min-h-[350px]">
+        <iframe
+          src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
   );
 };
 

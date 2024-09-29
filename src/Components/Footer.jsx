@@ -19,7 +19,7 @@ const OurServices = () => {
       <h2 className="mb-6 text-sm font-semibold uppercase">Our Services</h2>
       <ul>
         {services.map((service, index) => (
-          <li key={index} className="mb-4">
+          <li key={index} className="mb-4 hover:text-secondary">
             <a href={service.url} className="">
               {service.name}
             </a>
@@ -43,7 +43,10 @@ const FollowUs = () => {
       <h2 className="mb-6 text-sm font-semibold uppercase">Follow Us</h2>
       <ul>
         {socialLinks.map((link, index) => (
-          <li key={index} className="mb-4 flex items-center">
+          <li
+            key={index}
+            className="mb-4 flex items-center hover:text-secondary"
+          >
             <a href={link.url} className="flex items-center">
               {link.icon} <span className="ml-2">{link.name}</span>
             </a>
@@ -66,7 +69,7 @@ const Legal = () => {
       <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
       <ul>
         {legalLinks.map((link, index) => (
-          <li key={index} className="mb-4">
+          <li key={index} className="mb-4 hover:text-secondary">
             <a href={link.url} className="">
               {link.name}
             </a>
@@ -97,16 +100,16 @@ const Footer = () => {
             </a>
           </div>
           {/* Menu Sections */}
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 ">
             <OurServices />
             <FollowUs />
             <Legal />
           </div>
         </div>
-        <hr className="my-3 border-gray-200 sm:mx-auto dark:border-gray-700" />
+        <hr className="my-3 border-gray-200 sm:mx-auto" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2022{" "}
+            © 2024{" "}
             <a href="#" className="hover:underline">
               Your website
             </a>
