@@ -1,137 +1,110 @@
 import React from "react";
-import logo_1 from "../assets/logo.jpg";
+import logo_1 from "../assets/logo_1.png";
 import {
   FaFacebookSquare,
   FaTwitterSquare,
   FaInstagramSquare,
+  FaPhone,
 } from "react-icons/fa";
 
-// OurServices Component
-const OurServices = () => {
-  const services = [
-    { name: "Sample", url: "#" },
-    { name: "Sample", url: "#" },
-    { name: "Sample", url: "#" },
-  ];
-
-  return (
-    <div>
-      <h2 className="mb-6 text-sm font-semibold uppercase">Our Services</h2>
-      <ul>
-        {services.map((service, index) => (
-          <li key={index} className="mb-4 hover:text-secondary">
-            <a href={service.url} className="">
-              {service.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-// FollowUs Component
-const FollowUs = () => {
-  const socialLinks = [
-    { name: "Facebook", url: "#", icon: <FaFacebookSquare /> },
-    { name: "Instagram", url: "#", icon: <FaInstagramSquare /> },
-    { name: "Twitter", url: "#", icon: <FaTwitterSquare /> },
-  ];
-
-  return (
-    <div>
-      <h2 className="mb-6 text-sm font-semibold uppercase">Follow Us</h2>
-      <ul>
-        {socialLinks.map((link, index) => (
-          <li
-            key={index}
-            className="mb-4 flex items-center hover:text-secondary"
-          >
-            <a href={link.url} className="flex items-center">
-              {link.icon} <span className="ml-2">{link.name}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-// Legal Component
-const Legal = () => {
-  const legalLinks = [
-    { name: "Privacy Policy", url: "#" },
-    { name: "Terms & Conditions", url: "#" },
-  ];
-
-  return (
-    <div>
-      <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
-      <ul>
-        {legalLinks.map((link, index) => (
-          <li key={index} className="mb-4 hover:text-secondary">
-            <a href={link.url} className="">
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+import { IoMail, IoLocation } from "react-icons/io5";
+import SocialMedia from "./SocialMedia";
 
 // Footer Component
 const Footer = () => {
   return (
-    <footer className="p-4 sm:p-6 font-semibold text-white bg-primary">
-      <div className="mx-auto max-w-screen-xl">
-        <div className="md:flex md:justify-between">
-          {/* Logo and branding */}
-          <div className="mb-6 md:mb-0">
-            <a href="#" className="flex items-center">
-              <img
-                src={logo_1}
-                className="mr-3 h-24 rounded-md"
-                alt="DocEase Logo"
-              />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                Nature Walks
-              </span>
-            </a>
-          </div>
-          {/* Menu Sections */}
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 ">
-            <OurServices />
-            <FollowUs />
-            <Legal />
-          </div>
-        </div>
-        <hr className="my-3 border-gray-200 sm:mx-auto" />
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2024{" "}
-            <a href="#" className="hover:underline">
-              Your website
-            </a>
-            . All Rights Reserved.
-          </span>
-          <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            {/* Social media icons */}
-            <a
-              href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                {/* Social icon content */}
-              </svg>
-            </a>
+    // <!-- Footer section with social media icons and newsletter sign-up -->
+    <footer
+      class="flex flex-col items-center pt-4 bg-white text-center text-secondary"
+      style={{
+        boxShadow:
+          "0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)",
+      }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 md:mx-16">
+        <div className="md:mb-2 mb-6">
+          <div className=" flex flex-col md:items-start items-center justify-center gap-4">
+            <div className="">
+              {/* <!-- Logo --> */}
+              <a href="#" className="flex items-center">
+                <img
+                  src={logo_1}
+                  className="mr-3 md:h-32 h-28 rounded-md"
+                  alt="DocEase Logo"
+                />
+                <span className="self-center md:text-4xl text-[20px] font-semibold whitespace-nowrap">
+                  Lanka Nature Walks
+                </span>
+              </a>
+              {/* <!-- Social media icons --> */}
+              <div customClass="">
+                <SocialMedia customClass="justify-center mt-4" />
+              </div>
+            </div>
           </div>
         </div>
+        <div className="">
+          {/* <!-- Information --> */}
+          <div class="mb-6 mx-2">
+            <span className="self-center text-lg  font-semibold whitespace-nowrap">
+              MAKE YOUR HOLIDAY <br className="block md:hidden" /> PEACE A
+              BEAUTIFUL MEMORY!
+            </span>
+
+            <p className=" mt-2 text-sm text-gray-800">
+              Discover eco-friendly mountain adventures in Sri Lanka! Our tours
+              blend adventure, culture, and sustainability, showcasing the
+              country's natural beauty while minimizing environmental impact.
+            </p>
+          </div>
+
+          {/* <!-- Contact section --> */}
+          <div class="grid md:grid-cols-2 lg:grid-cols-1">
+            <div class="mb-6 flex flex-col items-center justify-center">
+              <h5 class="mb-2.5 font-bold text-lg uppercase">Contact</h5>
+
+              <ul class="mb-0 flex flex-col items-start gap-2 list-none text-gray-800">
+                <li>
+                  <a
+                    href="https://maps.app.goo.gl/awZFadYu2vuVzsqv6"
+                    target="blank"
+                    className=" flex items-center justify-center gap-3"
+                  >
+                    <IoLocation /> Monisha villa Hamparawa Bandarawela
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/+94728866776"
+                    target="blank"
+                    className=" flex items-center justify-center gap-3"
+                  >
+                    <FaPhone /> +94 72 8866776
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto: lankanaturewalks@gmail.com"
+                    className=" flex items-center justify-center gap-3"
+                  >
+                    <IoMail /> lankanaturewalks@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <!-- Copyright section --> */}
+      <div class="w-full bg-gray-100 p-4 text-center">
+        <span className="text-sm text-primary sm:text-center">
+          © 2024{" "}
+          <a href="" className="hover:underline">
+            Lanka Nature Walks
+          </a>
+          . All Rights Reserved.
+        </span>
       </div>
     </footer>
   );

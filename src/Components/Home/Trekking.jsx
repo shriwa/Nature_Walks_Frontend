@@ -13,62 +13,58 @@ import hanthana from "../../assets/locations/hanthana.jpg";
 import gartmore from "../../assets/locations/gartmore.jpg";
 import sripada from "../../assets/locations/sripada.jpg";
 import narangala from "../../assets/locations/narangala.jpg";
+import horton_plains from "../../assets/locations/horton_plains.jpg";
+import ella from "../../assets/locations/ella.jpg";
+import knuckles_mountain_range from "../../assets/locations/knuckles_mountain_range.webp";
+import pekoe_trail from "../../assets/locations/pekoe_trail.jpg";
 
 const slideData = [
   {
     id: 1,
-    image: sinharaja,
-    title: "Sinharaja",
-    rating: 4.5,
-    link: "#",
+    image: horton_plains,
+    title:
+      "Horton Plains NP, Kirigalpoththa Mountains, Nuwara Eliya, Haputhale and Ohiya",
+    link: "",
   },
   {
     id: 2,
-    image: hanthana,
-    title: "Hanthana",
-    rating: 4.8,
-    link: "#",
+    image: ella,
+    title: " Ella, Haputale, Ohiya, Belihuloya, Nuwaraeliya & Bandarawela",
+    link: "",
   },
   {
     id: 3,
-    image: sigiriya,
-    title: "Sigiriya",
-    rating: 4.7,
-    link: "#",
-  },
-  {
-    id: 4,
-    image: gartmore,
-    title: "Gartmore",
-    rating: 4.9,
-    link: "#",
+    image: knuckles_mountain_range,
+    title: "Knuckles Mountain Range",
+    link: "",
   },
   {
     id: 4,
     image: sripada,
-    title: "Sripada",
-    rating: 4.9,
-    link: "#",
+    title: "Adam’s Peak and Peak wilderness sanctuary",
+    link: "",
   },
   {
-    id: 4,
-    image: narangala,
-    title: "Narangala",
-    rating: 4.9,
-    link: "#",
+    id: 5,
+    image: sinharaja,
+    title: "Sinharaja Rain Forest and rural areas south of Sinharaja",
+    link: "",
+  },
+  {
+    id: 6,
+    image: pekoe_trail,
+    title: "Pekoe Trail Trekking Tour",
+    link: "",
   },
 ];
 
-const Gallery_1 = () => {
+const Trekking = () => {
   return (
-    <section id="gallery" className="py-16">
+    <section id="gallery" className="">
       <div className="pb-16">
         <h2 className="w-full text-center text-gray-900 text-4xl font-bold leading-loose pb-2.5">
-          Our Gallery
+          Trekking Activities
         </h2>
-        <p className="w-full text-center text-gray-600 text-lg font-normal leading-8">
-          Explore the essence of beauty in our gallery's intimate space.
-        </p>
       </div>
 
       <div className="container mx-auto px-4">
@@ -84,7 +80,7 @@ const Gallery_1 = () => {
               centeredSlides: true,
             },
             200: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 15,
             },
           }}
@@ -107,33 +103,19 @@ const Gallery_1 = () => {
               key={slide.id}
               className="relative w-[370px] h-[420px]"
             >
-              <div className="relative">
-                <a href={slide.link}>
+              <div className="flex items-center justify-center relative">
+                <a href="/trekking">
                   <img
-                    className="w-[370px] h-[420px] object-cover rounded-2xl"
+                    className="w-[370px] h-[420px] object-cover rounded-2xl "
                     src={slide.image}
                     alt={slide.title}
                   />
-                  <div className="absolute inset-0 p-4">
-                    <div className="absolute bottom-8 left-8 text-white">
-                      <h2 className="text-3xl">{slide.title}</h2>
-
-                      <div className="flex text-orange-500">
-                        {/* Generate stars based on rating */}
-                        {Array(5)
-                          .fill(0)
-                          .map((_, i) => (
-                            <ion-icon
-                              key={i}
-                              name={
-                                i < Math.floor(slide.rating)
-                                  ? "star"
-                                  : "star-outline"
-                              }
-                            ></ion-icon>
-                          ))}
-                      </div>
-                    </div>
+                  <div className="absolute  bottom-0 w-[370px]   bg-black bg-opacity-50 p-2 rounded-b-2xl">
+                    {" "}
+                    {/* Positioned title at bottom */}
+                    <h2 className="text-white text-center text-sm md:text-xl font-bold">
+                      {slide.title}
+                    </h2>
                   </div>
                 </a>
               </div>
@@ -142,10 +124,10 @@ const Gallery_1 = () => {
 
           {/* Slider Control */}
           <div className="flex justify-center items-center space-x-8 mt-8">
-            <div className="swiper-button-prev flex justify-center items-center w-14 h-14 rounded-full bg-white shadow-lg">
+            <div className="swiper-button-prev flex justify-center items-center w-14 h-14 rounded-full bg-white/50 shadow-lg">
               <ion-icon name="arrow-back-outline"></ion-icon>
             </div>
-            <div className="swiper-button-next flex justify-center items-center w-14 h-14 rounded-full bg-white shadow-lg">
+            <div className="swiper-button-next flex justify-center items-center w-14 h-14 rounded-full bg-white/50 shadow-lg">
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
             <div className="swiper-pagination mt-4"></div>
@@ -156,4 +138,4 @@ const Gallery_1 = () => {
   );
 };
 
-export default Gallery_1;
+export default Trekking;

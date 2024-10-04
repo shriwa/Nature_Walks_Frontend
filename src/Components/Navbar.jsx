@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo_1 from "../assets/logo.jpg";
+import logo_1 from "../assets/logo_1.png";
+import logo_3 from "../assets/logo_3.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,9 +8,10 @@ const Navbar = () => {
 
   const menus = [
     { name: "Home", link: "/" },
-    { name: "Gallery", link: "#gallery" },
-    { name: "About Us", link: "#about" },
-    { name: "Contact Us", link: "#contact" },
+    { name: "Trekking", link: "/trekking" },
+    { name: "Booking", link: "/booking" },
+    { name: "About Us", link: "/aboutus" },
+    { name: "Contact Us", link: "/contact" },
   ];
 
   const toggleMenu = () => {
@@ -36,16 +38,26 @@ const Navbar = () => {
     <div>
       {/* Top Bar */}
       <div
-        className={`fixed w-full top-0 z-[999]  transition-colors duration-500 hover:bg-primary text-white bg-opacity-95 hover:text-white  ${
-          scrolled ? " bg-primary bg-opacity-95" : "bg-transparent"
+        className={`fixed w-full top-0 z-[999] transition-colors duration-500 hover:bg-white  text-primary bg-opacity-95 hover:text-secondary  ${
+          scrolled
+            ? " bg-white shadow-xl bg-opacity-100 text-secondary"
+            : "bg-transparent"
         }`}
       >
-        <div className="antialiase text-text_1">
+        <div className="antialiase">
           <div className="w-full h-[7rem]">
             <div className="flex flex-row items-center justify-between max-w-screen-xl mx-auto p-4 md:px-6 lg:px-8">
-              <a href="/">
-                <img src={logo_1} alt="" className="h-20 rounded-md" />
-              </a>
+              <div className=" flex items-center justify-center  md:gap-14">
+                <a href="/">
+                  <img src={logo_1} alt="" className="h-20 rounded-md " />
+                </a>
+                {/* <a href="/">
+                  <img src={logo_3} alt="" className="h-44 rounded-md" />
+                </a> */}
+                <a href="/" className=" text-[20px] md:text-3xl font-semibold ">
+                  Lanka Nature Walks
+                </a>
+              </div>
               {/* Show menu button only on small screens */}
               <button
                 className="rounded-lg focus:outline-none md:hidden"
@@ -54,7 +66,7 @@ const Navbar = () => {
                 <svg
                   fill="currentColor"
                   viewBox="0 0 20 20"
-                  className="w-6 h-6 text-white"
+                  className="w-6 h-6 text-primary"
                 >
                   {menuOpen ? (
                     <path
@@ -79,8 +91,8 @@ const Navbar = () => {
                     key={i}
                     className={`px-4 py-2 text-md font-semibold ${
                       scrolled
-                        ? "text-white hover:text-secondary"
-                        : " hover:text-secondary"
+                        ? "text-primary hover:text-secondary"
+                        : " text-primary hover:text-secondary"
                     }`}
                     href={menu.link}
                   >
@@ -95,7 +107,7 @@ const Navbar = () => {
 
       {/* Sidebar for small screens */}
       <div
-        className={`fixed top-0 left-0 h-full bg-primary bg-opacity-90 text-white transition-transform transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 h-full bg-gray-100 bg-opacity-90 text-primary transition-transform transform duration-500 ease-in-out ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } z-[998] w-48 md:hidden`}
       >
