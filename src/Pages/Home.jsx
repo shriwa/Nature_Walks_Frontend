@@ -12,8 +12,8 @@ const Home = () => {
       <Banner_1 />
       <Services />
       <Trekking />
-      <Gallery_2 />
       <AboutUs />
+      <Gallery_2 />
       <ContactUs />
     </div>
   );

@@ -18,7 +18,7 @@ const Gallery_2 = () => {
       title: "Title 1",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ea debitisnon aspe",
-      img: "https://static.vecteezy.com/system/resources/previews/030/317/926/large_2x/hikers-paradise-rear-view-shows-tourist-relishing-mountain-vista-embracing-travel-lifestyle-vertical-mobile-wallpaper-ai-generated-free-photo.jpg",
+      img: "https://lh3.googleusercontent.com/IZT03fES_vBmZECrvmmzQLMftqwB99-30sqxCboED1uByspXWnendEsTpdVrcb1L94fruNI00ZV9mQKfq7G06BWEwwnIK4wG7t83W8sTp_ItOMNyaRHYZUzRA5T5Uve1_A=w1280",
       link: "",
     },
     {
@@ -62,12 +62,12 @@ const Gallery_2 = () => {
                 className="absolute w-full h-full object-cover opacity-60"
               />
               {/* Content Overlay */}
-              <div className="relative z-10 text-center text-white px-4 max-w-xl">
+              <div className="fixed bottom-14 z-10 text-center text-white px-4 max-w-xl">
                 <h2 className="text-4xl font-bold mb-4">{image.title}</h2>
                 <p className="text-lg mb-6">{image.description}</p>
                 <a
                   href={image.link}
-                  className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700"
+                  className="mt-12 bg-primary text-white font-bold py-3 px-6 border border-white rounded-lg hover:bg-secondary hover:text-white transition duration-300"
                 >
                   Learn More
                 </a>
