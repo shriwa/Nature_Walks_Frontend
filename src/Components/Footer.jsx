@@ -43,6 +43,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         <div className="">
           {/* <!-- Information --> */}
           <div class="mb-6 mx-2">
