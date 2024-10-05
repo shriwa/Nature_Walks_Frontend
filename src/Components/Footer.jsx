@@ -13,7 +13,7 @@ import SocialMedia from "./SocialMedia";
 // Footer Component
 const Footer = () => {
   return (
-    // <!-- Footer section with social media icons and newsletter sign-up -->
+    // Footer section with social media icons and newsletter sign-up
     <footer
       class="flex flex-col items-center pt-4 bg-white text-center text-secondary"
       style={{
