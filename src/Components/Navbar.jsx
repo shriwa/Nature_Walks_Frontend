@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const menus = [
     { name: "Home", link: "/" },
-    { name: "Trekking", link: "/trekking" },
+    { name: "Services", link: "/services" },
     { name: "Booking", link: "/booking" },
     { name: "About Us", link: "/aboutus" },
     { name: "Contact Us", link: "/contact" },
@@ -38,7 +38,7 @@ const Navbar = () => {
     <div>
       {/* Top Bar */}
       <div
-        className={`fixed w-full top-0 z-[999] transition-colors duration-500 hover:bg-white  text-primary bg-opacity-95 hover:text-secondary  ${
+        className={`fixed w-full top-0 z-[999] transition-colors duration-500 hover:bg-white  text-primary  hover:text-secondary  ${
           scrolled
             ? " bg-white shadow-xl bg-opacity-100 text-secondary"
             : "bg-transparent"
@@ -107,12 +107,12 @@ const Navbar = () => {
 
       {/* Sidebar for small screens */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-100 bg-opacity-90 text-primary transition-transform transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 h-full bg-gray-100 bg-opacity-95 text-primary transition-transform transform duration-500 ease-in-out ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } z-[998] w-48 md:hidden`}
       >
         <div className="flex flex-col h-full">
-          <nav className="flex flex-col p-4 space-y-4 mt-24">
+          <nav className="flex flex-col p-4 space-y-4 mt-28">
             {menus.map((menu, i) => (
               <a
                 key={i}

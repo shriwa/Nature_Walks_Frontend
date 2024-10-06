@@ -12,6 +12,14 @@ import SocialMedia from "./SocialMedia";
 
 // Footer Component
 const Footer = () => {
+  const menus = [
+    { name: "Home", link: "/" },
+    { name: "Services", link: "/services" },
+    { name: "Booking", link: "/booking" },
+    { name: "About Us", link: "/aboutus" },
+    { name: "Contact Us", link: "/contact" },
+  ];
+
   return (
     // Footer section with social media icons and newsletter sign-up
     <footer
@@ -36,17 +44,11 @@ const Footer = () => {
                   Lanka Nature Walks
                 </span>
               </a>
-              {/* <!-- Social media icons --> */}
-              <div customClass="">
-                <SocialMedia customClass="justify-center mt-4" />
-              </div>
             </div>
           </div>
-        </div>
 
-        <div className="">
           {/* <!-- Information --> */}
-          <div class="mb-6 mx-2">
+          <div class="mb-6 mx-2 mt-10">
             <span className="self-center text-lg  font-semibold whitespace-nowrap">
               MAKE YOUR HOLIDAY <br className="block md:hidden" /> PEACE A
               BEAUTIFUL MEMORY!
@@ -58,9 +60,12 @@ const Footer = () => {
               country's natural beauty while minimizing environmental impact.
             </p>
           </div>
+          {/*  */}
+        </div>
 
-          {/* <!-- Contact section --> */}
-          <div class="grid md:grid-cols-2 lg:grid-cols-1">
+        <div className="md:flex flex-col">
+          <div class="grid md:grid-cols-2 lg:grid-cols-1  ">
+            {/* <!-- Contact section & Social Media --> */}
             <div class="mb-6 flex flex-col items-center justify-center">
               <h5 class="mb-2.5 font-bold text-lg uppercase">Contact</h5>
 
@@ -93,7 +98,27 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+            {/* <!-- Social media icons --> */}
+            <div customClass=" mb-2">
+              <SocialMedia customClass="justify-center mt-4 mb-4 md:mt-2 md:mb-4" />
+            </div>
+            {/*  */}
           </div>
+          {/* Menu Links */}
+          <div class="md:mb-2 md:mt-0 flex flex-col items-center justify-center">
+            <li className="grid md:grid-cols-5 grid-cols-3">
+              {menus.map((menu, i) => (
+                <a
+                  key={i}
+                  className={`px-4 py-2 text-md font-semibold text-primary hover:text-secondary`}
+                  href={menu.link}
+                >
+                  {menu.name}
+                </a>
+              ))}
+            </li>
+          </div>
+          {/*  */}
         </div>
       </div>
 

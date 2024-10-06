@@ -10,8 +10,6 @@ const InformationTemplate = ({
   duration = [],
   whatsIncluded = [],
   departure = [],
-  trekkingLevel = [],
-  physicalFitness,
   lowestRate = [],
   trainTimes = [],
 }) => {
@@ -27,7 +25,7 @@ const InformationTemplate = ({
       <h1 className="lg:text-4xl text-2xl  mt-4 mb-4 md:text-5xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-gray-700 to-secondary text-center">
         {title}
       </h1>
-      <div className=" bg-gray-200 rounded-t-lg py-8 md:py-2">
+      <div className=" bg-gray-200 rounded-t-lg py-8 md:p-0">
         <div className="mx-auto px-6 lg:px-2">
           <div className="mx-auto lg:text-center flex flex-col justify-center items-center">
             <h2 className="text-base md:flex items-center justify-between text-center mt-8 p-2 font-semibold leading-7 text-white bg-gradient-to-r from-primary via-gray-800 to-secondary w-full rounded-lg uppercase mb-4">
@@ -126,8 +124,6 @@ const InformationTemplate = ({
           {duration ||
           whatsIncluded ||
           departure ||
-          trekkingLevel ||
-          physicalFitness ||
           lowestRate ||
           trainTimes ? (
             <div className="grid gap-6 md:grid-cols-3 md:col-span-2 lg:col-span-3">
@@ -170,22 +166,7 @@ const InformationTemplate = ({
                   ))}
                 </p>
               </div>
-              {/* Trekking Level */}
-              <div className="rounded p-5  bg-primary hover:bg-green-800 text-white transition duration-300">
-                <div className="flex items-center mb-1">
-                  <p className="text-lg font-semibold sm:text-base">
-                    Trekking Level
-                  </p>
-                </div>
-                <p className="text-sm ">
-                  {trekkingLevel.map((level, index) => (
-                    <span key={index}>
-                      {level}
-                      {index < trekkingLevel.length - 1 && <br />}
-                    </span>
-                  ))}
-                </p>
-              </div>
+
               {/* Train Times */}
               <div className="rounded p-5  bg-primary hover:bg-green-800 text-white transition duration-300">
                 <div className="flex items-center mb-1">

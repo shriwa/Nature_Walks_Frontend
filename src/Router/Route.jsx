@@ -5,8 +5,11 @@ import DefaultLayout from "../Layout/DefaultLayout";
 import NotFound from "../Pages/NotFound";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
-import Information from "../Pages/Information";
 import Booking from "../Pages/Booking";
+import TrekkingAndHikking from "../Pages/Services/TrekkingAndHikking";
+import Cuisine from "../Pages/Services/Cuisine";
+import TukTuk from "../Pages/Services/TukTuk";
+import Services from "../Components/Home/Services";
 
 const Router = createBrowserRouter([
   {
@@ -26,8 +29,20 @@ const Router = createBrowserRouter([
         element: <ContactUs />,
       },
       {
-        path: "/trekking",
-        element: <Information />,
+        path: "/services",
+        element: <Services />,
+      },
+      {
+        path: "/trekking&hiking",
+        element: <TrekkingAndHikking />,
+      },
+      {
+        path: "/cuisine",
+        element: <Cuisine />,
+      },
+      {
+        path: "/tuktuk",
+        element: <TukTuk />,
       },
       {
         path: "/booking",

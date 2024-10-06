@@ -1,17 +1,16 @@
 import React from "react";
 
-import {
-  PlantationTreking,
-  ThangamaleTrekking,
-  OhiyaTrekking,
-  HortonPlainsHike,
-  LittleAdamsPeakAndNineArches,
-  TrekkingToEllaAttractions,
-  HortonPlainsTrekkingTour,
-  SingelTreeTrekkingTour,
-} from "../Components/Locations/TrekkingData";
+// import {
+//   PlantationTreking,
+//   ThangamaleTrekking,
+//   OhiyaTrekking,
+//   HortonPlainsHike,
+//   LittleAdamsPeakAndNineArches,
+//   TrekkingToEllaRock,
+//   HortonPlainsTrekkingTour,
+//   SingelTreeTrekkingTour,
+// } from "../Components/Locations/TrekkingData";
 import InformationTemplate from "../Components/InformationTemplate";
-import Trekking from "../Components/Home/Trekking";
 
 const pricing = [
   {
