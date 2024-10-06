@@ -18,8 +18,8 @@ const Gallery_2 = ({ images = [] }) => {
         autoplay={{ delay: 3000 }}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
-          640: { slidesPerView: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 3, spaceBetween: 30 },
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          1024: { slidesPerView: 1, spaceBetween: 30 },
         }}
       >
         {images.map((image, index) => (
