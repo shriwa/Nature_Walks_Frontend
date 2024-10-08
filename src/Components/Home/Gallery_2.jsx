@@ -15,21 +15,21 @@ const Gallery_2 = ({ images = [] }) => {
         navigation={true}
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
         className="mySwiper"
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 4000 }}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
           640: { slidesPerView: 1, spaceBetween: 20 },
-          1024: { slidesPerView: 1, spaceBetween: 30 },
+          1024: { slidesPerView: 2, spaceBetween: 5 },
         }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative flex items-center justify-center h-[500px] bg-gray-900">
+            <div className="relative flex items-center justify-center h-[450px] bg-gray-900 md:mt-8">
               {/* Background Image */}
               <img
                 src={image.img}
                 alt={image.name}
-                className="absolute w-full h-full object-cover opacity-60"
+                className="absolute w-full h-full object-cover opacity-90"
               />
               {/* Content Overlay */}
               <div className="fixed bottom-14 z-10 text-center text-white px-4 max-w-xl">

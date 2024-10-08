@@ -17,6 +17,10 @@ import {
   NuwaraeliyaToEllaTrekking,
   VillageTrekkingWithTempleStay,
   TeaPluckingExperience,
+  LiptonsFactory,
+  BuduruwagalaBuddhaStatue,
+  HortonplainWorldsendKirigalpoththaTrekking,
+  SafariInYala,
 } from "../../Components/Locations/TrekkingData";
 
 import ServicesLayout from "../../Layout/ServicesLayout";
@@ -39,6 +43,10 @@ const TrekkingAndHiking = () => {
     NuwaraeliyaToEllaTrekking,
     VillageTrekkingWithTempleStay,
     TeaPluckingExperience,
+    LiptonsFactory,
+    BuduruwagalaBuddhaStatue,
+    HortonplainWorldsendKirigalpoththaTrekking,
+    SafariInYala,
   ];
 
   const title = "TREKKING & HIKING";

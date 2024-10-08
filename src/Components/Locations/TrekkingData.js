@@ -16,6 +16,10 @@ import CupOfTea from "../../assets/Trekking/CupOfTea.jpg";
 import Nuwaraeliya from "../../assets/Trekking/Nuwaraeliya.jpg";
 import ella_rock from "../../assets/Trekking/ella-rock.jpg";
 import alternative from "../../assets/alternative.png";
+import yala from "../../assets/Trekking/yala.webp";
+import Buduruwagala from "../../assets/Trekking/Buduruwagala.jpg";
+import LiptonFactory from "../../assets/Trekking/LiptonsFactory.jpeg";
+import HortonplainkirigalpoththaTrekking from "../../assets/Trekking/HortonplainWorldsendKirigalpoththaTrekking.webp";
 
 export const PlantationTreking = {
   title: "Tea Plantation Trekking & Picnic Experience",
@@ -359,4 +363,71 @@ export const TeaPluckingExperience = {
     "Accommodation",
     "Dinner & Breakfast",
   ],
+};
+
+export const SafariInYala = {
+  title: " Safari in Yala or Udawalawa National Park",
+  from: "Ella, Bandarawela or Haputale",
+  image: yala,
+  duration: "4 Hours",
+  departure: " 9:00 AM",
+  whatsIncluded: [
+    "Lunch",
+    "All Fees and Taxes",
+    "Professional guide",
+    "Bottled water",
+    "Picnic Lunch",
+    "Transport By Car or Tuk Tuk",
+  ],
+};
+
+export const HortonplainWorldsendKirigalpoththaTrekking = {
+  title: " Safari in Yala or Udawalawa National Park",
+  from: "Ella, Bandarawela or Haputale",
+  image: HortonplainkirigalpoththaTrekking,
+  duration: "4 Hours",
+  departure: " 5:00 AM",
+  whatsIncluded: [
+    "Transport By Car",
+    "All Fees and Taxes",
+    "Professional guide",
+    "Bottled water",
+    "Lunch",
+    "Jeep Safari",
+  ],
+};
+
+export const BuduruwagalaBuddhaStatue = {
+  title: "Buduruwagala Buddha statue",
+  from: "Ella, Bandarawela or Haputale",
+  image: Buduruwagala,
+  duration: "4 Hours",
+  departure: "9:00 AM",
+  whatsIncluded: [
+    "Lunch",
+    "All Fees and Taxes",
+    "Professional guide",
+    "Bottled water",
+    "Picnic Lunch",
+    "Local Transport",
+  ],
+  description:
+    "Moderate Trekking trail has ups and downs, but not so steep. This is an outdoor Trekking Activity in tropical Country",
+};
+
+export const LiptonsFactory = {
+  title: "Lipton’s Seat, Lipton’s Original Tea Plantation & Factory",
+  from: "Ella, Bandarawela or Haputale",
+  image: LiptonFactory,
+  duration: "4 Hours",
+  departure: "9:00 AM",
+  whatsIncluded: [
+    "Lunch",
+    "All Fees and Taxes",
+    "Professional guide",
+    "Bottled water",
+    "Local Transport",
+  ],
+  description:
+    "This is an outdoor Trekking Activity in tropical Country not so steep",
 };

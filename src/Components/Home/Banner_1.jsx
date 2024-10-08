@@ -8,9 +8,11 @@ import {
 } from "react-icons/fa";
 import SocialMedia from "../SocialMedia";
 
+import banner_image from "../../assets/Banner/main.jpg";
+
 const Banner_1 = () => {
   return (
-    <div className="relative font-sans before:absolute before:w-full before:h-full h-[40rem] before:inset-0 before:bg-gray-800 before:opacity-30 before:z-10">
+    <div className="relative font-sans before:absolute before:w-full before:h-full h-[40rem] before:inset-0 before:bg-gray-800 before:opacity-10 before:z-10">
       {/* <video
         src={video}
         type="video/mp4"
@@ -25,7 +27,7 @@ const Banner_1 = () => {
       /> */}
 
       <img
-        src="https://muralsyourway.vtexassets.com/arquivos/ids/239459/Kool-Aid-Lake-Hikers-WA-Wallpaper-Mural.jpg?v=638164554435270000"
+        src={banner_image}
         alt="Banner Image"
         class="absolute inset-0 w-full h-full object-cover "
       />
@@ -34,18 +36,19 @@ const Banner_1 = () => {
         <h2 className="sm:text-4xl text-2xl font-bold mb-6 mt-12">
           Discover the Wonders of Sri Lanka
         </h2>
+
         <p className="sm:text-lg text-base text-center text-gray-200">
-          Welcome to Lanka Nature Walks, your portal to unforgettable adventures
-          in Sri Lanka. Our curated tour packages offer you the chance to
-          explore the island's breathtaking landscapes, rich culture, and
-          timeless traditions.
+          Welcome to Lanka Nature Walks – your gateway to unforgettable
+          adventures in Sri Lanka. Our curated tours let you discover the
+          island's stunning landscapes, vibrant culture, and timeless
+          traditions.
         </p>
 
         <a
-          href="/booking"
-          className="mt-12 bg-transparent text-white font-bold py-3 px-6 border border-white rounded-lg hover:bg-primary hover:text-white transition duration-300"
+          href="/services"
+          className="mt-12 bg-primary text-white font-bold py-3 px-6 border border-white rounded-lg hover:bg-secondary hover:text-white hover:scale-[103%] transition duration-300"
         >
-          Book Now
+          Explore
         </a>
 
         {/* <!-- Social media icons --> */}

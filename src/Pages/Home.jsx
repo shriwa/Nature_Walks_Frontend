@@ -6,34 +6,34 @@ import ContactUs from "../Pages/ContactUs";
 import Services from "../Components/Home/Services";
 import WhatWeDo from "../Components/Home/WhatWeDo";
 
+import banner_1 from "../assets/Banner/banner_1.jpg";
+import banner_2 from "../assets/Banner/banner_2.jpg";
+import banner_3 from "../assets/Banner/banner_3.jpg";
+import banner_4 from "../assets/Banner/banner_4.jpg";
+import banner_5 from "../assets/Banner/banner_5.jpg";
+
 const images = [
   {
     name: "banner 1",
-    title: "Title 1",
-    description: "Description for slide 1",
-    img: "https://example.com/image1.jpg",
-    link: "",
+    img: banner_1,
   },
   {
     name: "banner 2",
-    title: "Title 2",
-    description: "Description for slide 2",
-    img: "https://example.com/image2.jpg",
-    link: "",
+
+    img: banner_2,
   },
   {
-    name: "banner 2",
-    title: "Title 2",
-    description: "Description for slide 2",
-    img: "https://example.com/image2.jpg",
-    link: "",
+    name: "banner 3",
+
+    img: banner_3,
   },
   {
-    name: "banner 2",
-    title: "Title 2",
-    description: "Description for slide 2",
-    img: "https://example.com/image2.jpg",
-    link: "",
+    name: "banner 4",
+    img: banner_4,
+  },
+  {
+    name: "banner 5",
+    img: banner_5,
   },
 ];
 

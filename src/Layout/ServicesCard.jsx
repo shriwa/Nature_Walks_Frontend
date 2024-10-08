@@ -33,13 +33,13 @@ const ServicesCard = ({ details }) => {
         </h5>
 
         <div className=" md:flex items-center justify-center gap-3">
-          <a className="md:flex items-center justify-center">
+          <div className="relative md:flex flex-col items-center justify-center">
             <img
               className="object-cover object-center rounded-lg w-full h-[14rem] md:w-[30rem] md:h-[28rem]"
               src={details.image}
               alt="Trekking Image"
             />
-          </a>
+          </div>
 
           {/* 
              <a className="md:flex flex-col gap-5 items-center justify-center">
@@ -129,7 +129,22 @@ const ServicesCard = ({ details }) => {
                 ) : (
                   <></>
                 )}
+
+                {/* <div className=" flex items-start justify-start">
+                  <a
+                    href="/booking"
+                    className="bg-primary w-[8rem] text-white text-center font-bold py-2 px-2 border border-white rounded-lg hover:bg-secondary hover:text-white transition duration-300"
+                  >
+                    Book Now
+                  </a>
+                </div> */}
               </div>
+              {/* <a
+                href="/booking"
+                className="mt-12 bg-transparent text-white text-center font-bold py-3 px-6 border border-white rounded-lg hover:bg-secondary hover:text-white transition duration-300"
+              >
+                Book Now
+              </a> */}
             </div>
           ) : (
             <></>

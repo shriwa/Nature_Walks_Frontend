@@ -6,6 +6,7 @@ import {
   FaGoogle,
   FaWhatsapp,
   FaTripadvisor,
+  FaTiktok,
 } from "react-icons/fa"; // Example icons
 
 const SocialMedia = ({ customClass = "", iconClass = "" }) => {
@@ -23,12 +24,12 @@ const SocialMedia = ({ customClass = "", iconClass = "" }) => {
   return (
     <div className={`flex space-x-4 ${customClass}`}>
       <SocialMediaIcon
-        href="https://facebook.com"
+        href="https://web.facebook.com/profile.php?id=61565891180774"
         IconComponent={FaFacebookF} // Facebook icon
         iconStyles={iconClass}
       />
       <SocialMediaIcon
-        href="https://instagram.com"
+        href="https://www.instagram.com/lankanaturewalks/"
         IconComponent={FaInstagram} // Instagram icon
         iconStyles={iconClass}
       />
@@ -38,8 +39,8 @@ const SocialMedia = ({ customClass = "", iconClass = "" }) => {
         iconStyles={iconClass}
       />
       <SocialMediaIcon
-        href="https://www.tripadvisor.com/"
-        IconComponent={FaTripadvisor} // Trip Advisor icon
+        href="https://www.tiktok.com/@lankanaturewalk?_t=8qLNYEDWCFm&_r=1"
+        IconComponent={FaTiktok} // Tiktok icon
         iconStyles={iconClass}
       />
       <SocialMediaIcon

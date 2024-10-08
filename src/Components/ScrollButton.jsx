@@ -29,7 +29,7 @@ const ScrollButton = () => {
     <div>
       {visible && (
         <div
-          className="fixed bottom-5 right-5 z-[999] cursor-pointer text-white text-3xl bg-primary w-10 h-10 flex items-center justify-center rounded-full "
+          className="fixed bottom-5 right-5 z-[999] cursor-pointer hover:scale-105 text-white text-3xl bg-primary w-10 h-10 flex items-center justify-center rounded-full "
           onClick={scrollToTop}
         >
           <FaChevronUp />

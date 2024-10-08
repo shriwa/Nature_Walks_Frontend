@@ -5,16 +5,14 @@ import * as yup from "yup";
 const ContactUs = () => {
   const form = useRef();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
   // Yup schema definition
   const userSchema = yup.object().shape({
     name: yup.string().required("Name is required"),
     email: yup.string().email("Invalid email").required("Email is required"),
-    phone: yup
-      .string()
-      .matches(/^\d+$/, "Phone number must be numeric")
-      .required("Phone number is required"),
+    phone: yup.string().matches(/^\d+$/, "Phone number must be numeric"),
     message: yup.string().required("Message is required"),
   });
 
@@ -45,6 +43,8 @@ const ContactUs = () => {
     const isValid = await validateForm();
     if (!isValid) return;
 
+    setLoading(true);
+
     emailjs
       .sendForm("service_z7ot1jm", "template_8njv5ln", form.current, {
         publicKey: "zMuSP_cSV9wW2eweW",
@@ -53,9 +53,11 @@ const ContactUs = () => {
         () => {
           console.log("SUCCESS!");
           setIsSubmitted(true);
+          setLoading(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setLoading(false);
         }
       );
   };
@@ -68,8 +70,8 @@ const ContactUs = () => {
       <div>
         <h2 className="text-primary text-3xl font-extrabold">Get In Touch</h2>
         <p className="text-sm text-gray-500 mt-4 leading-relaxed">
-          Have a specific inquiry or looking to explore new opportunities? Our
-          experienced team is ready to engage with you.
+          Have a specific inquiry? Our experienced team is ready to engage with
+          you.
         </p>
 
         {!isSubmitted ? (
@@ -110,22 +112,42 @@ const ContactUs = () => {
             <button
               type="submit"
               className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-primary hover:bg-secondary transition-all duration-700 ease-in-out text-white"
+              disabled={loading}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16px"
-                height="16px"
-                fill="#fff"
-                className="mr-2"
-                viewBox="0 0 548.244 548.244"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              Send Message
+              {loading ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="animate-spin mr-2 h-5 w-5 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 4v4m0 8v4m4-4h4M8 12H4m7.707-7.707l-1.414 1.414M7.757 16.243l-1.414 1.414M16.243 16.243l1.414 1.414M16.243 7.757l1.414-1.414"
+                  />
+                </svg>
+              ) : (
+                <>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    fill="#fff"
+                    className="mr-2"
+                    viewBox="0 0 548.244 548.244"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Send Message
+                </>
+              )}
             </button>
           </form>
         ) : (

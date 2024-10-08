@@ -11,9 +11,10 @@ const Booking = () => {
       </div>
       <div className="container flex items-center justify-center mx-auto px-4">
         <iframe
+          className=" w-full h-[20rem]"
           src="https://docs.google.com/forms/d/e/1FAIpQLScxDwf2UgGeJw27QZHbOQkjCAHPHG8vp-nA-Ab7FRxWa8ji5Q/viewform?embedded=true"
           width="800"
-          height="1870"
+          height="0"
           frameborder="0"
           marginheight="0"
           marginwidth="0"

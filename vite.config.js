@@ -4,9 +4,7 @@ import copy from "rollup-plugin-copy";
 export default defineConfig({
   plugins: [
     copy({
-      targets: [
-        { src: "public/_redirects", dest: "build" }, // Copy _redirects to dist
-      ],
+      targets: [{ src: "public/_redirects", dest: "build" }],
     }),
   ],
 });
