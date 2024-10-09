@@ -10,8 +10,8 @@ const Navbar = () => {
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
     { name: "Booking", link: "/booking" },
-    { name: "About Us", link: "/aboutus" },
-    { name: "Contact Us", link: "/contact" },
+    { name: "About", link: "/aboutus" },
+    { name: "Contact", link: "/contact" },
   ];
 
   const toggleMenu = () => {

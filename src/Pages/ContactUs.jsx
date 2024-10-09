@@ -65,7 +65,7 @@ const ContactUs = () => {
   return (
     <div
       id="contact"
-      className="grid md:grid-cols-2  gap-16 items-center relative overflow-hidden p-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white md:mt-32 mt-12 mb-8 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-primary before:h-full max-md:before:hidden"
+      className="grid md:grid-cols-2  gap-16 items-center relative overflow-hidden p-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl  mx-auto bg-white mt-12 mt mb-8 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-primary before:h-full max-md:before:hidden"
     >
       <div>
         <h2 className="text-primary text-3xl font-extrabold">Get In Touch</h2>

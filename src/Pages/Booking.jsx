@@ -2,7 +2,7 @@ import React from "react";
 
 const Booking = () => {
   return (
-    <section id="gallery" className=" mt-32 mb-2">
+    <section id="gallery" className="mt-12 mb-2">
       <div className="pb-4">
         <h2 className="w-full text-center text-gray-900 text-4xl font-bold leading-loose pb-2.5">
           Booking

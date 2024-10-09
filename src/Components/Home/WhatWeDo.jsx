@@ -27,12 +27,12 @@ const WhatWeDo = () => {
 
   return (
     <section className="text-gray-700 body-font md:mt-12">
-      <div className="container md:px-20 py-0 mx-auto">
-        <div className="grid gap-2 grid-cols-1 md:grid-cols-4">
+      <div className="container md:px-20 py-0 mx-auto ">
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-4 ">
           {servicesData.map((service, index) => (
             <div
               key={index}
-              className="p-4 transform transition duration-500 hover:scale-110"
+              className="p-4 transform transition duration-500 hover:scale-110 "
             >
               <div className="flex justify-center items-center">
                 <img

@@ -12,7 +12,7 @@ import banner_image from "../../assets/Banner/main.jpg";
 
 const Banner_1 = () => {
   return (
-    <div className="relative font-sans before:absolute before:w-full before:h-full h-[40rem] before:inset-0 before:bg-gray-800 before:opacity-10 before:z-10">
+    <div className="relative mt-[-5rem] font-sans before:absolute before:w-full before:h-full h-[40rem] before:inset-0 before:bg-gray-800 before:opacity-10 before:z-10">
       {/* <video
         src={video}
         type="video/mp4"
@@ -33,7 +33,7 @@ const Banner_1 = () => {
       />
 
       <div className="min-h-[350px] relative z-50 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-        <h2 className="sm:text-4xl text-2xl font-bold mb-6 mt-12">
+        <h2 className="sm:text-4xl text-2xl font-bold mb-6 md:mt-32 mt-8">
           Discover the Wonders of Sri Lanka
         </h2>
 

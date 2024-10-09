@@ -16,8 +16,8 @@ const Footer = () => {
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
     { name: "Booking", link: "/booking" },
-    { name: "About Us", link: "/aboutus" },
-    { name: "Contact Us", link: "/contact" },
+    { name: "About", link: "/aboutus" },
+    { name: "Contact", link: "/contact" },
   ];
 
   return (
@@ -47,19 +47,21 @@ const Footer = () => {
             </div>
           </div>
 
+          <hr className="hidden md:block mx-4 mt-4 shadow-lg" />
+
           {/* <!-- Information --> */}
-          <div class="mb-6 mx-2 mt-10">
-            <span className="self-center text-lg  font-semibold whitespace-nowrap">
-              MAKE YOUR HOLIDAY <br className="block md:hidden" /> PEACE A
-              BEAUTIFUL MEMORY!
+          <div class="md:mb-6 mx-2 mt-10">
+            <span className="self-center md:text-xl  font-semibold whitespace-nowrap px-4">
+              Make Your Holiday Peace a Beautiful Memory!
             </span>
 
-            <p className=" mt-2 text-sm text-gray-800">
+            <p className=" mt-2 text-sm text-gray-800 px-2">
               Discover eco-friendly mountain adventures in Sri Lanka! Our tours
               blend adventure, culture, and sustainability, showcasing the
               country's natural beauty while minimizing environmental impact.
             </p>
           </div>
+
           {/*  */}
         </div>
 
@@ -67,7 +69,7 @@ const Footer = () => {
           <div class="grid md:grid-cols-2 lg:grid-cols-1  ">
             {/* <!-- Contact section & Social Media --> */}
             <div class="mb-6 flex flex-col items-center justify-center">
-              <h5 class="mb-2.5 font-bold text-lg uppercase">Contact</h5>
+              <h5 class="mb-2.5 font-bold text-lg">Contact</h5>
 
               <ul class="mb-0 flex flex-col items-start gap-2 list-none text-gray-800">
                 <li>
@@ -98,32 +100,37 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="grid md:grid-rows-2 md:grid-cols-1 grid-cols-1 mt-4">
             {/* <!-- Social media icons --> */}
-            <div customClass=" mb-2">
-              <SocialMedia customClass="justify-center mt-4 mb-4 md:mt-2 md:mb-4" />
+            <div customClass="">
+              <SocialMedia customClass="justify-center md:mt-4 mb-8 md:mt-2 md:mb-2" />
             </div>
             {/*  */}
+
+            {/* Menu Links */}
+            <div className="md:mb-2 md:mt-0 flex flex-col items-center justify-center">
+              <ul className="grid md:grid-cols-5 grid-cols-3 justify-items-center md:gap-0 gap-2">
+                {menus.map((menu, i) => (
+                  <li key={i}>
+                    <a
+                      className="px-4 py-2 text-md font-semibold text-primary hover:text-secondary"
+                      href={menu.link}
+                    >
+                      {menu.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/*  */}
           </div>
-          {/* Menu Links */}
-          <div class="md:mb-2 md:mt-0 flex flex-col items-center justify-center">
-            <li className="grid md:grid-cols-5 grid-cols-3">
-              {menus.map((menu, i) => (
-                <a
-                  key={i}
-                  className={`px-4 py-2 text-md font-semibold text-primary hover:text-secondary`}
-                  href={menu.link}
-                >
-                  {menu.name}
-                </a>
-              ))}
-            </li>
-          </div>
-          {/*  */}
         </div>
       </div>
 
       {/* <!-- Copyright section --> */}
-      <div class="w-full bg-gray-100 p-4 text-center">
+      <div class="w-full bg-gray-100 p-4 text-center mt-4">
         <span className="text-sm text-primary sm:text-center">
           © 2024{" "}
           <a href="" className="hover:underline">

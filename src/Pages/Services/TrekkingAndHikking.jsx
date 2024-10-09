@@ -51,7 +51,7 @@ const TrekkingAndHiking = () => {
 
   const title = "TREKKING & HIKING";
   const description =
-    "A day out in the Tuk Tuk to the best Sri Lankan Tea Plantation in Sri Lanka. Lipton’s Seat and popular tea factory called Dambethanna Tea Factory. Nothing can be compared to the blowing wind in the countryside in a tuk-tuk ride.";
+    "Trekking and hiking in Sri Lanka offer breathtaking experiences across the country's lush landscapes. Popular areas such as Ella, Haputale, Ohiya, Belihuloya, Nuwara Eliya, and Bandarawela are ideal for adventurers. These regions are known for their rolling hills, tea plantations, misty mountains, and serene forests. One of the most captivating experiences is trekking through Sri Lankan tea plantations, where hikers can enjoy panoramic views, cool climates, and the rich cultural heritage of tea cultivation. Trails in these areas are perfect for nature lovers seeking to explore the island's natural beauty and tranquility.";
 
   return (
     <ServicesLayout

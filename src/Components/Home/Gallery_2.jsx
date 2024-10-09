@@ -7,7 +7,7 @@ import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
 
 const Gallery_2 = ({ images = [] }) => {
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4">
+    <div className="max-w-7xl mx-auto py-4 px-8 md:mt-8">
       <Swiper
         loop={true}
         spaceBetween={30}

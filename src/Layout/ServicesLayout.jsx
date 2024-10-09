@@ -4,7 +4,7 @@ import ServicesCard from "../Layout/ServicesCard";
 
 const ServicesLayout = ({ title, description, servicesDetails }) => {
   return (
-    <div className="px-4 mx-auto py-4 sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-32">
+    <div className="px-4 mx-auto py-4 sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8">
       <div className="md:flex items-center justify-center gap-2 mx-auto mb-4 ">
         {/* <img
         className="object-cover object-center md:w-[25rem] p-1 mt-4 rounded-lg order-first lg:order-last"
@@ -14,7 +14,9 @@ const ServicesLayout = ({ title, description, servicesDetails }) => {
 
         <h1 className="lg:text-4xl text-2xl mt-4 mb-4 md:text-5xl font-bold tracking-tight text-gray-800 text-center">
           {title}
-          <p className="md:text-xl text-sm mt-8">{description}</p>
+          <p className="md:text-lg text-start  font-semibold text-sm mt-8">
+            {description}
+          </p>
         </h1>
       </div>
       <div className="grid-cols-1 sm:grid md:grid-cols-2 gap-8 mb-8">

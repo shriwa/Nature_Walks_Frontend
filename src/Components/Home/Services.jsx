@@ -26,20 +26,20 @@ const slideData = [
 
 const Services = () => {
   return (
-    <section id="services" className="mt-24">
+    <section id="services" className="mt-12">
       <div className="">
         <h2 className="w-full text-center text-gray-900 text-4xl font-bold leading-loose pb-2.5">
           Our Services
         </h2>
       </div>
-      <div className="container m-auto px-6 py-4 grid grid-cols-1 md:grid-cols-3 space-y-2 md:space-y-0">
+      <div className="container m-auto px-6 py-1 grid grid-cols-1 md:grid-cols-3 space-y-2 md:space-y-0">
         {/* Map over slideData to create SwiperSlide components */}
         {slideData.map((slide) => (
           <div
             key={slide.id}
             className="w-full md:w-full h-[400px] mx-auto flex flex-col items-center justify-center"
           >
-            <div className="flex items-center justify-center relative">
+            <div className="flex items-center justify-center relative ">
               <a
                 href={slide.link}
                 className="hover:scale-95 transition-all duration-700 ease-in-out bg-gray-800 p-2 rounded-xl"
