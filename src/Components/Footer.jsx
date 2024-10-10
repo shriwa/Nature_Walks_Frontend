@@ -31,14 +31,14 @@ const Footer = () => {
     >
       <div className="grid grid-cols-1 md:grid-cols-1 md:mx-24">
         {/* first column */}
-        <div className="md:mb-2 mb-6">
+        <div className="md:mb-2 mb-3">
           <div className="md:flex md:items-center items-center justify-center gap-40">
-            <div className="">
+            <div className=" flex items-center justify-center">
               {/* <!-- Logo --> */}
               <a href="#" className="flex items-center">
                 <img
                   src={logo_1}
-                  className="mr-3 md:h-32 h-28 rounded-md"
+                  className="md:h-32 h-24 rounded-md"
                   alt="DocEase Logo"
                 />
                 <span className="self-center md:text-4xl text-[20px] font-semibold whitespace-nowrap">
@@ -70,38 +70,8 @@ const Footer = () => {
         {/* second column */}
         {/* <!-- Contact section & Social Media --> */}
         <div className="md:flex items-center justify-start md:mx-24">
-          {/* <!-- Social media icons --> */}
-          <div className="grid md:grid-rows-2 md:grid-cols-1 grid-cols-1 mt-4">
-            <div customClass="">
-              <SocialMedia customClass="justify-center md:mt-4 mb-8 md:mt-2 md:mb-2" />
-            </div>
-            {/*  */}
-
-            {/* Menu Links */}
-            <div className="md:mb-2 md:mt-0 flex flex-col items-center justify-center">
-              <ul className="grid lg:grid-cols-5 grid-cols-3 justify-items-center md:gap-0 gap-2">
-                {menus.map((menu, i) => (
-                  <li key={i}>
-                    <a
-                      className="px-4 py-2 text-md font-semibold text-primary hover:text-secondary"
-                      href={menu.link}
-                    >
-                      {menu.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/*  */}
-          </div>
-
-          {/* hr line */}
-          <hr className="hidden md:block h-[5rem]  border-l border-gray-300  mx-auto" />
-          {/*  */}
-
           {/* Contact section */}
-          <div class="grid md:grid-cols-2 lg:grid-cols-1 md:mt-0 mt-8 ">
+          <div class="grid md:grid-cols-2 lg:grid-cols-1 md:mt-0">
             <div class="mb-6 flex flex-col items-center justify-center">
               <h5 class="mb-2.5 font-bold text-lg">Contact</h5>
 
@@ -134,6 +104,35 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+          </div>
+
+          {/* hr line */}
+          <hr className="hidden md:block h-[5rem]  border-l border-gray-300  mx-auto" />
+          {/*  */}
+
+          {/* <!-- Social media & Menus --> */}
+          <div className="grid md:grid-rows-2 md:grid-cols-1 grid-cols-1 mt-4 md:gap-0 gap-9">
+            <div customClass="">
+              <SocialMedia customClass="justify-center md:mt-4 mb-2 md:mt-2 md:mb-2 " />
+            </div>
+            {/*  */}
+
+            {/* Menu Links */}
+            <div className="md:mb-2 md:mt-4 flex-col items-center justify-center md:order-last order-first">
+              <ul className="grid lg:grid-cols-5 grid-cols-5 justify-items-center md:gap-0 gap-2 px-4">
+                {menus.map((menu, i) => (
+                  <li key={i}>
+                    <a
+                      className="px-4 py-2 text-md font-semibold text-primary hover:text-secondary"
+                      href={menu.link}
+                    >
+                      {menu.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/*  */}
           </div>
         </div>
       </div>
