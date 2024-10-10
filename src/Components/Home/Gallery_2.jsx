@@ -5,21 +5,26 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
 
-const Gallery_2 = ({ images = [] }) => {
+const Gallery_2 = ({
+  images = [],
+  autoplayDelay = 4000, // Default autoplay delay
+  spaceBetween = 30, // Default space between slides
+  slidesPerView = 1, // Default slides per view
+}) => {
   return (
     <div className="max-w-7xl mx-auto py-4 px-8 md:mt-8">
       <Swiper
         loop={true}
-        spaceBetween={30}
+        spaceBetween={spaceBetween}
         pagination={{ clickable: true }}
         navigation={true}
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
         className="mySwiper"
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: autoplayDelay }}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
           640: { slidesPerView: 1, spaceBetween: 20 },
-          1024: { slidesPerView: 2, spaceBetween: 5 },
+          1024: { slidesPerView: slidesPerView, spaceBetween: 5 },
         }}
       >
         {images.map((image, index) => (
@@ -27,12 +32,13 @@ const Gallery_2 = ({ images = [] }) => {
             <div className="relative flex items-center justify-center h-[450px] bg-gray-900 md:mt-8">
               {/* Background Image */}
               <img
-                src={image.img}
-                alt={image.name}
+                src={image}
+                alt={`Gallery image ${index}`}
                 className="absolute w-full h-full object-cover opacity-90"
               />
               {/* Content Overlay */}
-              <div className="fixed bottom-14 z-10 text-center text-white px-4 max-w-xl">
+              {/* Uncomment this section if you want to display title and description */}
+              {/* <div className="fixed bottom-14 z-10 text-center text-white px-4 max-w-xl">
                 <h2 className="text-4xl font-bold mb-4">{image.title}</h2>
                 <p className="text-lg mb-6">{image.description}</p>
                 {image.link && (
@@ -43,7 +49,7 @@ const Gallery_2 = ({ images = [] }) => {
                     Learn More
                   </a>
                 )}
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
         ))}

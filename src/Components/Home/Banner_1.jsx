@@ -10,9 +10,11 @@ import SocialMedia from "../SocialMedia";
 
 import banner_image from "../../assets/Banner/main.jpg";
 
+import { logos } from "../../images";
+
 const Banner_1 = () => {
   return (
-    <div className="relative mt-[-5rem] font-sans before:absolute before:w-full before:h-full h-[40rem] before:inset-0 before:bg-gray-800 before:opacity-10 before:z-10">
+    <div className="relative mt-[-5rem] font-sans before:absolute before:w-full before:h-full h-[40rem] before:inset-0 before:bg-primary before:opacity-10 before:z-10">
       {/* <video
         src={video}
         type="video/mp4"

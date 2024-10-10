@@ -38,11 +38,13 @@ const Navbar = () => {
     <div>
       {/* Top Bar */}
       <div
-        className={`fixed w-full top-0 z-[999] transition-colors duration-500 hover:bg-white  text-primary  hover:text-secondary  ${
-          scrolled
-            ? " bg-white shadow-xl bg-opacity-100 text-secondary"
-            : "bg-transparent"
-        }`}
+        className={`fixed w-full top-0 z-[999] transition-all md:duration-700  text-primary 
+    ${
+      scrolled || menuOpen
+        ? "bg-white shadow-xl text-secondary"
+        : "bg-transparent"
+    } 
+    hover:bg-white hover:text-secondary transform md:hover:scale-[102%] hover:scale-100`}
       >
         <div className="antialiase">
           <div className="w-full h-[7rem]">
@@ -89,10 +91,10 @@ const Navbar = () => {
                 {menus.map((menu, i) => (
                   <a
                     key={i}
-                    className={`px-4 py-2 text-md font-semibold ${
+                    className={`px-4 py-2 text-md font-semibold transform md:hover:scale-[103%] ${
                       scrolled
-                        ? "text-primary hover:text-secondary"
-                        : " text-primary hover:text-secondary"
+                        ? "text-primary hover:text-secondary "
+                        : " text-primary hover:text-secondary "
                     }`}
                     href={menu.link}
                   >
@@ -116,7 +118,7 @@ const Navbar = () => {
             {menus.map((menu, i) => (
               <a
                 key={i}
-                className="px-4 py-2 text-md font-semibold bg-transparent rounded-lg hover:bg-white hover:text-primary"
+                className="px-4 py-2 text-md font-semibold bg-transparent rounded-lg hover:text-secondary"
                 href={menu.link}
               >
                 {menu.name}

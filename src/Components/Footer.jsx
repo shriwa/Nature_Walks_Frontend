@@ -29,9 +29,10 @@ const Footer = () => {
           "0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)",
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 md:mx-16">
+      <div className="grid grid-cols-1 md:grid-cols-1 md:mx-24">
+        {/* first column */}
         <div className="md:mb-2 mb-6">
-          <div className=" flex flex-col md:items-start items-center justify-center gap-4">
+          <div className="md:flex md:items-center items-center justify-center gap-40">
             <div className="">
               {/* <!-- Logo --> */}
               <a href="#" className="flex items-center">
@@ -45,33 +46,66 @@ const Footer = () => {
                 </span>
               </a>
             </div>
+
+            {/* <!-- Information --> */}
+            <div class="md:mb-6 mx-2 mt-10 hidden md:block">
+              <span className="self-center md:text-xl  font-semibold whitespace-nowrap px-4">
+                Make Your Holiday Peace a Beautiful Memory!
+              </span>
+
+              <p className=" mt-2 text-sm text-gray-800 px-2">
+                Discover eco-friendly mountain adventures in Sri Lanka! Our
+                tours blend adventure, culture, and sustainability, showcasing
+                the country's natural beauty while minimizing environmental
+                impact.
+              </p>
+            </div>
           </div>
 
-          <hr className="hidden md:block mx-4 mt-4 shadow-lg" />
-
-          {/* <!-- Information --> */}
-          <div class="md:mb-6 mx-2 mt-10">
-            <span className="self-center md:text-xl  font-semibold whitespace-nowrap px-4">
-              Make Your Holiday Peace a Beautiful Memory!
-            </span>
-
-            <p className=" mt-2 text-sm text-gray-800 px-2">
-              Discover eco-friendly mountain adventures in Sri Lanka! Our tours
-              blend adventure, culture, and sustainability, showcasing the
-              country's natural beauty while minimizing environmental impact.
-            </p>
-          </div>
+          {/* <hr className="hidden md:block mx-4 mt-4 shadow-lg" /> */}
 
           {/*  */}
         </div>
 
-        <div className="md:flex flex-col">
-          <div class="grid md:grid-cols-2 lg:grid-cols-1  ">
-            {/* <!-- Contact section & Social Media --> */}
+        {/* second column */}
+        {/* <!-- Contact section & Social Media --> */}
+        <div className="md:flex items-center justify-start md:mx-24">
+          {/* <!-- Social media icons --> */}
+          <div className="grid md:grid-rows-2 md:grid-cols-1 grid-cols-1 mt-4">
+            <div customClass="">
+              <SocialMedia customClass="justify-center md:mt-4 mb-8 md:mt-2 md:mb-2" />
+            </div>
+            {/*  */}
+
+            {/* Menu Links */}
+            <div className="md:mb-2 md:mt-0 flex flex-col items-center justify-center">
+              <ul className="grid lg:grid-cols-5 grid-cols-3 justify-items-center md:gap-0 gap-2">
+                {menus.map((menu, i) => (
+                  <li key={i}>
+                    <a
+                      className="px-4 py-2 text-md font-semibold text-primary hover:text-secondary"
+                      href={menu.link}
+                    >
+                      {menu.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/*  */}
+          </div>
+
+          {/* hr line */}
+          <hr className="hidden md:block h-[5rem]  border-l border-gray-300  mx-auto" />
+          {/*  */}
+
+          {/* Contact section */}
+          <div class="grid md:grid-cols-2 lg:grid-cols-1 md:mt-0 mt-8 ">
             <div class="mb-6 flex flex-col items-center justify-center">
               <h5 class="mb-2.5 font-bold text-lg">Contact</h5>
 
-              <ul class="mb-0 flex flex-col items-start gap-2 list-none text-gray-800">
+              <ul class="mb-0 md:grid grid-cols-1 flex flex-col items-start gap-2 list-none text-gray-800">
                 <li>
                   <a
                     href="https://maps.app.goo.gl/awZFadYu2vuVzsqv6"
@@ -100,31 +134,6 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="grid md:grid-rows-2 md:grid-cols-1 grid-cols-1 mt-4">
-            {/* <!-- Social media icons --> */}
-            <div customClass="">
-              <SocialMedia customClass="justify-center md:mt-4 mb-8 md:mt-2 md:mb-2" />
-            </div>
-            {/*  */}
-
-            {/* Menu Links */}
-            <div className="md:mb-2 md:mt-0 flex flex-col items-center justify-center">
-              <ul className="grid md:grid-cols-5 grid-cols-3 justify-items-center md:gap-0 gap-2">
-                {menus.map((menu, i) => (
-                  <li key={i}>
-                    <a
-                      className="px-4 py-2 text-md font-semibold text-primary hover:text-secondary"
-                      href={menu.link}
-                    >
-                      {menu.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/*  */}
           </div>
         </div>
       </div>
