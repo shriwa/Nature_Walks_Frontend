@@ -29,12 +29,12 @@ const Gallery_2 = ({
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative flex items-center justify-center h-[450px] bg-gray-900 md:mt-8">
+            <div className="relative flex items-center justify-center h-[450px]  md:mt-8">
               {/* Background Image */}
               <img
                 src={image}
                 alt={`Gallery image ${index}`}
-                className="absolute w-full h-full object-cover opacity-90"
+                className="absolute w-full h-full object-cover opacity-90 rounded-xl"
               />
               {/* Content Overlay */}
               {/* Uncomment this section if you want to display title and description */}

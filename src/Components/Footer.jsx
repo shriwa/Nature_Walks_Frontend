@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="md:flex md:items-center items-center justify-center gap-40">
             <div className=" flex items-center justify-center">
               {/* <!-- Logo --> */}
-              <a href="#" className="flex items-center">
+              <a href="/" className="flex items-center">
                 <img
                   src={logo_1}
                   className="md:h-32 h-24 rounded-md"
@@ -87,7 +87,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/+94728866776"
+                    href="tel:+94728866776"
                     target="blank"
                     className=" flex items-center justify-center gap-3"
                   >
@@ -118,7 +118,7 @@ const Footer = () => {
             {/*  */}
 
             {/* Menu Links */}
-            <div className="md:mb-2 md:mt-4 flex-col items-center justify-center md:order-last order-first">
+            <div className=" hidden md:block md:mb-2 md:mt-4 flex-col items-center justify-center md:order-last order-first">
               <ul className="grid lg:grid-cols-5 grid-cols-5 justify-items-center md:gap-0 gap-2 px-4">
                 {menus.map((menu, i) => (
                   <li key={i}>

@@ -51,7 +51,7 @@ const WhatWeDo = () => {
   return (
     <section className="text-gray-700 body-font mt-12">
       <div className="container md:px-20 py-0 mx-auto ">
-        <div className="grid md:gap-0 gap-2 grid-cols-2 md:grid-cols-4 ">
+        <div className="grid md:gap-0 gap-y-4 gap-x-0 grid-cols-2 md:grid-cols-4 px-2">
           {servicesData.map((service, index) => (
             <div
               key={index}

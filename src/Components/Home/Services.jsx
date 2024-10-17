@@ -38,15 +38,15 @@ const Services = () => {
             <a href={slide.link}>
               <div
                 key={slide.id}
-                className="md:grid bg-gray-100 flex items-center md:justify-center justify-start p-2 md:p-4 transform transition duration-700 hover:scale-105 border md:border-none hover:bg-gray-200 rounded-lg"
+                className="md:grid bg-gray-100 flex items-center md:justify-center  gap-2 p-2 md:p-4 transform transition duration-700 hover:scale-105 border md:border-none hover:bg-gray-200 rounded-lg"
               >
                 <div className="flex justify-center items-center">
                   <img
                     src={slide.image}
-                    className="md:w-48 md:h-48 w-20 h-20 mb-3"
+                    className="md:w-48 md:h-48 w-20 h-20 mb-3 p-1"
                   />
                 </div>
-                <h2 className="title-font font-bold p-2 md:text-xl text-lg text-gray-800 text-center">
+                <h2 className="title-font md:text-center font-bold md:text-xl text-lg text-gray-800 text-start  md:p-0 p-2">
                   {slide.title}
                 </h2>
               </div>

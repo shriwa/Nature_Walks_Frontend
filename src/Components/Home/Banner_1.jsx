@@ -35,7 +35,7 @@ const Banner_1 = () => {
       />
 
       <div className="min-h-[350px] relative z-50 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-        <h2 className="sm:text-4xl text-2xl font-bold mb-6 md:mt-32 mt-8">
+        <h2 className="sm:text-4xl text-2xl font-bold mb-6 md:mt-32 mt-16">
           Discover the Wonders of Sri Lanka
         </h2>
 
@@ -54,7 +54,7 @@ const Banner_1 = () => {
         </a>
 
         {/* <!-- Social media icons --> */}
-        <SocialMedia customClass="mt-8" />
+        <SocialMedia customClass="mt-16" />
       </div>
     </div>
   );
