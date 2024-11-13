@@ -26,9 +26,9 @@ const ServicesCard = ({ details }) => {
   };
 
   return (
-    <div className="mx-auto md:p-0 p-2 mt-6 w-full md:max-w-5xl md:h-[26rem] md:full md:flex items-center justify-start self-start rounded-lg bg-gray-800 shadow-secondary-1 transition-all hover:scale-[102%] duration-700 ease-in-out">
+    <div className="mx-auto md:p-0 p-2 mt-6 w-full md:max-w-6xl md:h-[26rem] md:full md:flex items-center justify-start self-start md:rounded-br-[2rem] md:rounded-tl-[2rem] rounded-br-[2rem] rounded-tl-[2rem] bg-gray-800 shadow-secondary-1 transition-all hover:scale-[102%] duration-700 ease-in-out">
       <div className="py-0 px-2  text-secondary md:flex flex-col items-center justify-center">
-        <h5 className="mb-8 mt-3 md:py-1 md:mb-0 md:h-[2rem] text-xl text-center font-medium leading-tight text-white">
+        <h5 className="mb-8 mt-3 md:py-1 md:mb-0 md:h-[2rem] text-xl text-center font-bold leading-tight text-white">
           {details.title}
         </h5>
 
@@ -57,11 +57,11 @@ const ServicesCard = ({ details }) => {
            */}
 
           {isExpanded ? (
-            <div className="mb-4 mt-4 mx-auto md:h-[22rem] w-full md:w-[60rem] flex flex-col gap-4 text-white bg-primary p-4 rounded-md">
+            <div className="mb-4 mt-4 mx-auto md:h-[22rem] w-full md:w-[60rem] flex flex-col gap-4 text-white bg-primary p-4 md:rounded-br-[2rem] rounded-lg">
               <div className="flex flex-col gap-2 md:gap-2 md:grid grid-cols-2 ">
-                <div className="md:flex flex-col items-start gap-2">
+                <div className="md:flex flex-col items-start gap-2 ">
                   {details.from ? (
-                    <p>
+                    <p className="">
                       <strong>From:</strong> {details.from}
                     </p>
                   ) : (
@@ -128,7 +128,7 @@ const ServicesCard = ({ details }) => {
                 )}
 
                 {details.description ? (
-                  <p>
+                  <p className=" font-bold">
                     <strong></strong> {details.description}
                   </p>
                 ) : (
@@ -159,7 +159,7 @@ const ServicesCard = ({ details }) => {
 
       <button
         onClick={handleToggle}
-        className=" md:hidden mt-3 w-full px-3.5 mb-2 py-2 m-auto hover:scale-95 bg-primary hover:bg-secondary transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
+        className=" md:hidden mt-3 w-full px-3.5 mb-2 py-2 m-auto hover:scale-95 bg-primary hover:bg-secondary transition-all duration-700 ease-in-out md:rounded-tl-2xl rounded-br-2xl rounded-tl-2xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
       >
         <span className="px-1.5 text-white text-sm font-medium leading-6">
           {isExpanded ? "Show less" : "Read More"}

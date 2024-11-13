@@ -15,10 +15,7 @@ import sigiriya from "./assets/locations/sigiriya.jpeg";
 import sripada from "./assets/locations/sripada.jpg";
 
 // Cuisine Gallery
-import image_1 from "./assets/Cuisine/image_1.webp";
-import image_2 from "./assets/Cuisine/image_2.png";
-import image_3 from "./assets/Cuisine/image_3.jpg";
-import image_4 from "./assets/Cuisine/image_4.jpg";
+import image_1 from "./assets/Cuisine/image_5.webp";
 
 // Logos
 import logo from "./assets/logo.jpg";
@@ -42,7 +39,15 @@ export const home_gallery = [
   banner_5,
 ];
 
-export const cuisine_gallery = [image_1, image_2, image_3, image_4];
+export const cuisine_gallery = [
+  image_1,
+  image_1,
+  image_1,
+  image_1,
+  image_1,
+  image_1,
+  image_1,
+];
 
 export const logos = {
   logo,

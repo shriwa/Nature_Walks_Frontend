@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo_1 from "../assets/logo_1.png";
+import logo_name from "../assets/logo_3.png";
 import {
   FaFacebookSquare,
   FaTwitterSquare,
@@ -9,6 +10,13 @@ import {
 
 import { IoMail, IoLocation } from "react-icons/io5";
 import SocialMedia from "./SocialMedia";
+
+import tuk_tuk from "../assets/Services/tuk_tuk_2.png";
+import trekking from "../assets/Services/trekking_2.png";
+import cooking from "../assets/Services/cooking_2.png";
+
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 // Footer Component
 const Footer = () => {
@@ -20,110 +28,92 @@ const Footer = () => {
     { name: "Contact", link: "/contact" },
   ];
 
+  const services = [
+    {
+      id: 1,
+      image: tuk_tuk,
+      title: "Pekoe Tuk Tuk Safari",
+      link: "/tuktuk",
+    },
+    {
+      id: 2,
+      image: trekking,
+      title: "Trekking & Hikking",
+      link: "/trekking&hiking",
+    },
+    {
+      id: 3,
+      image: cooking,
+      title: "Traditional Cooking Classes",
+      link: "/cuisine",
+    },
+  ];
+
+  const contactInfo = [
+    {
+      href: "https://maps.app.goo.gl/awZFadYu2vuVzsqv6",
+      icon: <IoLocation />,
+      text: "Monisha villa Hamparawa Bandarawela",
+      type: "external",
+    },
+    {
+      href: "tel:+94728866776",
+      icon: <FaPhone />,
+      text: "+94 72 8866776",
+      type: "phone",
+    },
+    {
+      href: "mailto:lankanaturewalks@gmail.com",
+      icon: <IoMail />,
+      text: "lankanaturewalks@gmail.com",
+      type: "email",
+    },
+  ];
+
+  useEffect(() => {
+    Aos.init();
+  });
+
   return (
-    // Footer section with social media icons and newsletter sign-up
-    <footer
-      class="flex flex-col items-center pt-4 bg-white text-center text-secondary"
-      style={{
-        boxShadow:
-          "0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)",
-      }}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-1 md:mx-24">
-        {/* first column */}
-        <div className="md:mb-2 mb-3">
-          <div className="md:flex md:items-center items-center justify-center gap-40">
-            <div className=" flex items-center justify-center">
-              {/* <!-- Logo --> */}
-              <a href="/" className="flex items-center">
-                <img
-                  src={logo_1}
-                  className="md:h-32 h-24 rounded-md"
-                  alt="DocEase Logo"
-                />
-                <span className="self-center md:text-4xl text-[20px] font-semibold whitespace-nowrap">
-                  Lanka Nature Walks
-                </span>
-              </a>
-            </div>
+    <div className="bg-gray-100 text-gray-700">
+      <div
+        className=" flex flex-col items-center justify-center md:gap-8 gap-2 "
+        data-aos="fade-up"
+        data-aos-duration="700"
+      >
+        <div className="flex md:flex-row flex-col md:items-center justify-center md:gap-20 md:mt-4">
+          {/* <div className="h-32 w-[2px] bg-gray-300 shadow-2xl md:p-0 hidden md:block"></div> */}
 
-            {/* <!-- Information --> */}
-            <div class="md:mb-6 mx-2 mt-10 hidden md:block">
-              <span className="self-center md:text-xl  font-semibold whitespace-nowrap px-4">
-                Make Your Holiday Peace a Beautiful Memory!
-              </span>
-
-              <p className=" mt-2 text-sm text-gray-800 px-2">
-                Discover eco-friendly mountain adventures in Sri Lanka! Our
-                tours blend adventure, culture, and sustainability, showcasing
-                the country's natural beauty while minimizing environmental
-                impact.
-              </p>
-            </div>
-          </div>
-
-          {/* <hr className="hidden md:block mx-4 mt-4 shadow-lg" /> */}
-
-          {/*  */}
-        </div>
-
-        {/* second column */}
-        {/* <!-- Contact section & Social Media --> */}
-        <div className="md:flex items-center justify-start md:mx-24">
-          {/* Contact section */}
-          <div class="grid md:grid-cols-2 lg:grid-cols-1 md:mt-0">
-            <div class="mb-6 flex flex-col items-center justify-center">
-              <h5 class="mb-2.5 font-bold text-lg">Contact</h5>
-
-              <ul class="mb-0 md:grid grid-cols-1 flex flex-col items-start gap-2 list-none text-gray-800">
-                <li>
-                  <a
-                    href="https://maps.app.goo.gl/awZFadYu2vuVzsqv6"
-                    target="blank"
-                    className=" flex items-center justify-center gap-3"
+          {/* Menus & Services */}
+          <div className="flex md:flex-col flex-col  md:items-end items-center justify-center gap-8 md:gap-4 md:mt-0 mt-8 md:mb-0 mb-8">
+            {/* Services Links */}
+            <div className="grid md:gap-4 gap-2 grid-cols-3 md:grid-cols-3 items-center justify-center md:mx-0 mx-4 md:mt-">
+              {services.map((slide) => (
+                <a href={slide.link}>
+                  <div
+                    key={slide.id}
+                    className="md:flex  items-center justify-start md:gap-4 md:p-2 transform transition duration-700 hover:scale-[102%]  rounded-br-3xl rounded-tl-3xl"
                   >
-                    <IoLocation /> Monisha villa Hamparawa Bandarawela
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="tel:+94728866776"
-                    target="blank"
-                    className=" flex items-center justify-center gap-3"
-                  >
-                    <FaPhone /> +94 72 8866776
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto: lankanaturewalks@gmail.com"
-                    className=" flex items-center justify-center gap-3"
-                  >
-                    <IoMail /> lankanaturewalks@gmail.com
-                  </a>
-                </li>
-              </ul>
+                    <div className="flex justify-center items-center">
+                      <img
+                        src={slide.image}
+                        className="md:w-10 md:h-10 w-8 h-8 md:mb-3 p-1"
+                      />
+                    </div>
+                    <h2 className="title-font md:text-start text-center font-bold md:text-md text-xs text-gray-800 md:p-0 p-2">
+                      {slide.title}
+                    </h2>
+                  </div>
+                </a>
+              ))}
             </div>
-          </div>
-
-          {/* hr line */}
-          <hr className="hidden md:block h-[5rem]  border-l border-gray-300  mx-auto" />
-          {/*  */}
-
-          {/* <!-- Social media & Menus --> */}
-          <div className="grid md:grid-rows-2 md:grid-cols-1 grid-cols-1 mt-4 md:gap-0 gap-9">
-            <div customClass="">
-              <SocialMedia customClass="justify-center md:mt-4 mb-2 md:mt-2 md:mb-2 " />
-            </div>
-            {/*  */}
-
             {/* Menu Links */}
-            <div className=" hidden md:block md:mb-2 md:mt-4 flex-col items-center justify-center md:order-last order-first">
-              <ul className="grid lg:grid-cols-5 grid-cols-5 justify-items-center md:gap-0 gap-2 px-4">
+            <div className="md:mt-4 flex md:flex-col items-center justify-center">
+              <ul className="grid md:grid-cols-5 grid-cols-3  justify-center items-center md:justify-start md:items-start gap-6 md:gap-6">
                 {menus.map((menu, i) => (
                   <li key={i}>
                     <a
-                      className="px-4 py-2 text-md font-semibold text-primary hover:text-secondary"
+                      className="px-4 py-2 md:text-md md:text-md text-md font-bold  hover:text-secondary transform duration-700 hover:scale-[103%]"
                       href={menu.link}
                     >
                       {menu.name}
@@ -132,22 +122,65 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            {/*  */}
           </div>
         </div>
+        {/* <!-- Information --> */}
+        {/* <div class="md:mb-6 mt-10 hidden md:flex flex-col items-start justify-center mx-4">
+        <span className=" md:text-xl text-center font-bold text-primary">
+          Make Your Holiday Peace a Beautiful Memory!
+        </span>
+
+        <p className=" mt-2 text-sm  font-semibold text-gray-800">
+          Discover eco-friendly mountain adventures in Sri Lanka! Our tours
+          blend adventure, culture, and sustainability, showcasing the country's
+          natural beauty while minimizing environmental impact.
+        </p>
+      </div> */}
+
+        <div className="w-[80%] h-[1px] bg-gray-300 shadow-2xl md:p-0 md:mb-0 mb-4 "></div>
+
+        {/* Social & Contact */}
+        <div className=" flex md:flex-row flex-col items-center md:mt-0 mt-0 md:gap-20 gap-1">
+          {/* <!-- Social media & Menus --> */}
+          <div className=" text-black flex flex-col md:items-center f-f-l md:mt-0 mt- ">
+            <div customClass="">
+              <SocialMedia
+                customClass="justify-center mb-2 md:mb-2 grid-cols-6 md:gap-4 gap-4 text-black "
+                iconClass="p-2"
+                IconComponentStyle="text-black hover:text-primary transition duration-500"
+              />
+            </div>
+          </div>
+          {/*  */}
+          {/* Contact */}
+          <div className="mb-4 mt-4 flex md:flex-row flex-col items-start md:gap-12 gap-3 text-sm list-none font-semibold text-gray-800">
+            {contactInfo.map((item, index) => (
+              <li key={index}>
+                <a
+                  href={item.href}
+                  target={item.type === "external" ? "_blank" : "_self"}
+                  className="flex items-center gap-2 md:text-md text-md font-bold hover:text-secondary transform transition-transform duration-700 ease-in-out hover:scale-105"
+                >
+                  {item.icon} {item.text}
+                </a>
+              </li>
+            ))}
+          </div>
+          {/*  */}
+        </div>
+        {/*  */}
       </div>
 
-      {/* <!-- Copyright section --> */}
-      <div class="w-full bg-gray-100 p-4 text-center mt-4">
-        <span className="text-sm text-primary sm:text-center">
+      <footer class="w-full bg-gray-200 p-1 text-center font-bold mt-4">
+        <span className="text-xs md:text-sm text-primary sm:text-center">
           © 2024{" "}
           <a href="" className="hover:underline">
-            Lanka Nature Walks
+            Lanka Nature Walks.
           </a>
-          . All Rights Reserved.
+          All Rights Reserved.
         </span>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 };
 

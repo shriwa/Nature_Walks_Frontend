@@ -3,6 +3,7 @@ import Thangamale from "../../assets/Trekking/Thangamale.jpg";
 import Bambarakanda from "../../assets/Trekking/Bambarakanda Falls.jpg";
 import Kirigalpoththa from "../../assets/Trekking/Kirigalpoththa.jpg";
 import Adams_Peak from "../../assets/Trekking/Adam’s_Peak.jpg";
+import ravana_cave from "../../assets/Trekking/ravana_cave.jpg";
 import Ella_Rock from "../../assets/Trekking/Ella_Rock.jpg";
 import Horton_Plains from "../../assets/Trekking/Horton Plains.jpg";
 import Singel_tree from "../../assets/Trekking/Singel Tree.jpg";
@@ -118,7 +119,7 @@ export const LittleAdamsPeakAndNineArches = {
 
 export const TrekkingToEllaRock = {
   title: "Trekking to Ella Rock – Ravana Cave and Village",
-  image: Ella_Rock,
+  image: ravana_cave,
   from: "Ella, Haputale or Bandarawela",
   paragraphs:
     "Ella is a beautiful small town in the south of Sri Lanka in the Hill country. It is a great base for tourists who want to explore the surrounding hills and enjoy the breathtaking views of Badulla’s green valleys. The weather is usually quite humid, with moderate air temperature, sunny mornings, and often rain showers in the afternoon. Visiting Ella is not complete without climbing the most famous Ella Rock. The most rewarding, and most taxing, hike around Ella is the ascent of the majestic Ella Rock.",
@@ -224,7 +225,7 @@ export const SingelTreeTrekkingTour = {
 
 export const HortonPlainsWaterfallsTrekking = {
   title:
-    "Trekking Through Horton Plains, Words End, Tea Plantation to Highest Waterfalls via Devil’s Staircase",
+    "Trekking Through Horton Plains, Worlds End, Tea Plantation to Highest Waterfalls via Devil’s Staircase",
   image: HortonPlains2,
   duration: "6 Hours",
   departure: "Haputale, Ella, Bandarawela, & Nuwaraeliya 5:00 AM",
@@ -294,23 +295,23 @@ export const MistyMountainTrekking = {
   days: "Two Nights and Three Days",
 };
 
-export const MistyMountainHortonTrekking = {
-  title: "Trekking Through the Misty Mountain",
-  image: Misty,
-  description:
-    "Trekking through Thangamale Sanctuary, Natural Forest, Horton Plains, Words End, and Bakers Falls to the Highest Waterfalls via Devil’s Staircase",
-  duration: "6 Hours",
-  whatsIncluded: [
-    "Lunch",
-    "All Fees and Taxes",
-    "Professional guide",
-    "Bottled water",
-    "Picnic Lunch",
-    "2 Nights Accommodation",
-    "Dinner & Breakfast",
-  ],
-  days: "Two Nights and Three Days",
-};
+// export const MistyMountainHortonTrekking = {
+//   title: "Trekking Through the Misty Mountain",
+//   image: Misty,
+//   description:
+//     "Trekking through Thangamale Sanctuary, Natural Forest, Horton Plains, Words End, and Bakers Falls to the Highest Waterfalls via Devil’s Staircase",
+//   duration: "6 Hours",
+//   whatsIncluded: [
+//     "Lunch",
+//     "All Fees and Taxes",
+//     "Professional guide",
+//     "Bottled water",
+//     "Picnic Lunch",
+//     "2 Nights Accommodation",
+//     "Dinner & Breakfast",
+//   ],
+//   days: "Two Nights and Three Days",
+// };
 
 export const NuwaraeliyaToEllaTrekking = {
   title: "Trekking from Nuwaraeliya to Ella",

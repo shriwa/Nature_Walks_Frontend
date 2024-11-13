@@ -1,9 +1,9 @@
-import ella_1_tuk from "../../assets/tuk/ella_1_tuk.jpg";
+import ella_1_tuk from "../../assets/photos/IMG-20241025-WA0027.jpg";
 import ella_tuk from "../../assets/tuk/ella_tuk.jpg";
-import fullday_tuk from "../../assets/tuk/fullday_tuk.jpg";
+import fullday_tuk from "../../assets/photos/IMG-20241025-WA0021.jpg";
 import liptons_tuk from "../../assets/tuk/liptons_tuk.jpg";
 import plantation_tuk from "../../assets/tuk/plantation_tuk.jpg";
-import plantation_2_tuk from "../../assets/tuk/plantation_2_tuk.jpg";
+import plantation_2_tuk from "../../assets/photos/IMG-20241025-WA0035.jpg";
 
 export const LiptionsTukService = {
   title: "Tuk Tuk Safari in the Sri Lankan Tea Plantation The Lipton’s Seat",

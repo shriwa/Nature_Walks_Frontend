@@ -13,7 +13,6 @@ import {
   TeaPlantationEllaTrekking,
   ThangamaleSanctuaryTrekking,
   MistyMountainTrekking,
-  MistyMountainHortonTrekking,
   NuwaraeliyaToEllaTrekking,
   VillageTrekkingWithTempleStay,
   TeaPluckingExperience,
@@ -39,7 +38,7 @@ const TrekkingAndHiking = () => {
     HortonPlainsWaterfallsTrekking,
     TeaPlantationEllaTrekking,
     MistyMountainTrekking,
-    MistyMountainHortonTrekking,
+
     NuwaraeliyaToEllaTrekking,
     VillageTrekkingWithTempleStay,
     TeaPluckingExperience,

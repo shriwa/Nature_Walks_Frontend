@@ -7,22 +7,29 @@ import {
   FaWhatsapp,
   FaTripadvisor,
   FaTiktok,
-} from "react-icons/fa"; // Example icons
+  FaMailBulk,
+} from "react-icons/fa";
 
-const SocialMedia = ({ customClass = "", iconClass = "" }) => {
+import { GoMail } from "react-icons/go";
+
+const SocialMedia = ({
+  customClass = "",
+  iconClass = "",
+  IconComponentStyle = "",
+}) => {
   const SocialMediaIcon = ({ href, IconComponent, iconStyles }) => (
     <a
       href={href}
       target="blank"
       type="button"
-      className={`rounded-full bg-primary p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:scale-110 hover:bg-secondary hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 ${iconStyles}`}
+      className={`rounded-full  uppercase leading-normal text-white transition duration-500 ease-in-out  focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 ${iconStyles}`}
     >
-      <IconComponent className="h-5 w-5" />
+      <IconComponent className={`h-5 w-5 ${IconComponentStyle}`} />
     </a>
   );
 
   return (
-    <div className={`flex space-x-4 ${customClass}`}>
+    <div className={`grid ${customClass}`}>
       <SocialMediaIcon
         href="https://web.facebook.com/profile.php?id=61565891180774"
         IconComponent={FaFacebookF} // Facebook icon
@@ -43,9 +50,14 @@ const SocialMedia = ({ customClass = "", iconClass = "" }) => {
         IconComponent={FaTiktok} // Tiktok icon
         iconStyles={iconClass}
       />
-      <SocialMediaIcon
+      {/* <SocialMediaIcon
         href="mailto: lankanaturewalks@gmail.com"
-        IconComponent={FaGoogle} // Google icon
+        IconComponent={GoMail} // Google icon
+        iconStyles={iconClass}
+      /> */}
+      <SocialMediaIcon
+        href=""
+        IconComponent={FaTripadvisor} // Tripadvisor icon
         iconStyles={iconClass}
       />
     </div>

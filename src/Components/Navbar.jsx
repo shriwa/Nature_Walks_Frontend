@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import logo_1 from "../assets/logo_1.png";
 import logo_3 from "../assets/logo_3.png";
 
+import tuk_tuk from "../assets/Services/tuk_tuk_2.png";
+import trekking from "../assets/Services/trekking_2.png";
+import cooking from "../assets/Services/cooking_2.png";
+
+import "aos/dist/aos.css";
+import Aos from "aos";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -10,8 +17,29 @@ const Navbar = () => {
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
     { name: "Booking", link: "/booking" },
-    { name: "About", link: "/aboutus" },
+    { name: "About", link: "/about-us" },
     { name: "Contact", link: "/contact" },
+  ];
+
+  const slideData = [
+    {
+      id: 1,
+      image: tuk_tuk,
+      title: "Pekoe Tuk Tuk Safari",
+      link: "/tuktuk",
+    },
+    {
+      id: 2,
+      image: trekking,
+      title: "Trekking & Hikking",
+      link: "/trekking&hiking",
+    },
+    {
+      id: 3,
+      image: cooking,
+      title: "Traditional Cooking Classes",
+      link: "/cuisine",
+    },
   ];
 
   const toggleMenu = () => {
@@ -34,35 +62,51 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    Aos.init();
+  });
+
   return (
     <div>
       {/* Top Bar */}
       <div
-        className={`fixed w-full top-0 z-[999] transition-all md:duration-700  text-primary 
-    ${
-      scrolled || menuOpen
-        ? "bg-white shadow-xl text-secondary"
-        : "bg-transparent"
-    } 
-    hover:bg-white hover:text-secondary transform md:hover:scale-[102%] hover:scale-100`}
+        className={`fixed w-full top-0 z-[999] transition-all duration-200 text-primary
+    ${scrolled ? "bg-gray-50 shadow-2xl  transform " : ""} 
+   `}
       >
-        <div className="antialiase">
-          <div className="w-full h-[7rem]">
-            <div className="flex flex-row items-center justify-between max-w-screen-xl mx-auto p-4 md:px-6 lg:px-8">
-              <div className=" flex items-center justify-center  md:gap-14">
+        <div className="antialiase ">
+          <div className="w-full h-[7rem] ">
+            <div
+              className={`flex flex-row items-center md:justify-around  justify-between max-w-scr mx-auto p-3 md:px-6 lg:px-8 transition-all duration-300  ${
+                scrolled
+                  ? "md:gap-20 md:px-8 mt-0 bg-none"
+                  : "gap-4 md:mt-0 mt-0 md:bg-gray-50/70 "
+              }`}
+            >
+              <div className=" flex items-center justify-center  md:gap-8">
                 <a href="/">
                   <img src={logo_1} alt="" className="h-20 rounded-md " />
                 </a>
                 {/* <a href="/">
                   <img src={logo_3} alt="" className="h-44 rounded-md" />
                 </a> */}
-                <a href="/" className=" text-[20px] md:text-3xl font-semibold ">
+                <a href="/" className="md:text-3xl text-xl font-bold ">
                   Lanka Nature Walks
                 </a>
+
+                {/* <a href="/" className="text-[20px] md:text-3xl font-semibold">
+                  <span className="block text-white md:text-5xl font-extrabold relative">
+                    Lanka
+                    <span className="absolute inset-0 text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]"></span>
+                  </span>
+                  <span className="block text-green-500 text-2xl md:text-4xl font-medium">
+                    Nature Walks
+                  </span>
+                </a> */}
               </div>
               {/* Show menu button only on small screens */}
               <button
-                className="rounded-lg focus:outline-none md:hidden"
+                className="rounded-md focus:outline-none md:hidden"
                 onClick={toggleMenu}
               >
                 <svg
@@ -91,11 +135,8 @@ const Navbar = () => {
                 {menus.map((menu, i) => (
                   <a
                     key={i}
-                    className={`px-4 py-2 text-md font-semibold transform md:hover:scale-[103%] ${
-                      scrolled
-                        ? "text-primary hover:text-secondary "
-                        : " text-primary hover:text-secondary "
-                    }`}
+                    className={`px-4 py-2 text-lg font-bold hover:text-secondary transition-all duration-700 
+                   `}
                     href={menu.link}
                   >
                     {menu.name}
@@ -109,22 +150,40 @@ const Navbar = () => {
 
       {/* Sidebar for small screens */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-100 bg-opacity-95 text-primary transition-transform transform duration-500 ease-in-out ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
-        } z-[998] w-48 md:hidden`}
+        className={`fixed top-0 left-0 bg-white  text-primary  transition-transform transform duration-500 ease-in-out  ${
+          menuOpen ? "translate-x-0" : "-translate-y-full"
+        } z-[998] w-full  md:hidden rounded-b-md`}
       >
-        <div className="flex flex-col h-full">
-          <nav className="flex flex-col p-4 space-y-4 mt-28">
+        <div className="flex flex-col items-center justify-evenly mt-28 gap-4 ">
+          <nav className="grid grid-cols-1 gap-2 p-4">
             {menus.map((menu, i) => (
               <a
                 key={i}
-                className="px-4 py-2 text-md font-semibold bg-transparent rounded-lg hover:text-secondary"
+                className="px-4 py-2 text-md font-bold bg-transparent hover:text-secondary"
                 href={menu.link}
               >
                 {menu.name}
               </a>
             ))}
           </nav>
+
+          <div className="grid mb-8 gap-12 grid-cols-3 items-center justify-center md:mx-0 mx-4">
+            {slideData.map((slide) => (
+              <a href={slide.link}>
+                <div
+                  key={slide.id}
+                  className="flex  items-center justify-start gap-0 md:p-2 transform transition duration-700 hover:scale-[102%] rounded-xl border "
+                >
+                  <div className="flex justify-center items-center">
+                    <img src={slide.image} className="w-12 h-12 md:mb-3 p-2" />
+                  </div>
+                  {/* <h2 className="title-font max-w-28 md:text-start text-center font-bold text-xs text-gray-800 md:p-0 p-2">
+                    {slide.title}
+                  </h2> */}
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

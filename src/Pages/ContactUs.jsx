@@ -1,6 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import * as yup from "yup";
+
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { div } from "framer-motion/client";
 
 const ContactUs = () => {
   const form = useRef();
@@ -10,10 +14,13 @@ const ContactUs = () => {
 
   // Yup schema definition
   const userSchema = yup.object().shape({
-    name: yup.string().required("Name is required"),
-    email: yup.string().email("Invalid email").required("Email is required"),
-    phone: yup.string().matches(/^\d+$/, "Phone number must be numeric"),
-    message: yup.string().required("Message is required"),
+    name: yup.string().required("Name is required !"),
+    email: yup.string().email("Invalid email").required("Email is required !"),
+    phone: yup
+      .string()
+      .matches(/^\d+$/, "Phone number must be numeric !")
+      .required("Phone Number is required !"),
+    message: yup.string().required("Message is required !"),
   });
 
   // Form validation function using Yup
@@ -62,10 +69,20 @@ const ContactUs = () => {
       );
   };
 
+  useEffect(() => {
+    Aos.init();
+  });
+
+  useEffect(() => {
+    document.title = "Contact | Lanka Nature Walks";
+  });
+
   return (
     <div
       id="contact"
-      className="grid md:grid-cols-2  gap-16 items-center relative overflow-hidden p-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl  mx-auto bg-white mt-12 mt mb-8 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-primary before:h-full max-md:before:hidden"
+      className="grid md:grid-cols-2 md:mt-4  gap-16 items-center relative overflow-hidden p-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  rounded-lg max-w-6xl  mx-auto bg-white mb-8 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-primary before:h-full max-md:before:hidden"
+      data-aos="fade-up"
+      data-aos-duration="500"
     >
       <div>
         <h2 className="text-primary text-3xl font-extrabold">Get In Touch</h2>
@@ -77,41 +94,99 @@ const ContactUs = () => {
         {!isSubmitted ? (
           <form ref={form} onSubmit={sendEmail}>
             <div className="space-y-4 mt-8">
-              <input
-                type="text"
-                name="user_name"
-                placeholder={errors.name || "Full Name"}
-                className={`px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none ${
-                  errors.name ? "border-red-500 bg-red-100" : ""
-                }`}
-              />
-              <input
-                type="text"
-                name="user_phone"
-                placeholder={errors.phone || "Phone Number"}
-                className={`px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none ${
-                  errors.phone ? "border-red-500 bg-red-100" : ""
-                }`}
-              />
-              <input
-                type="email"
-                name="user_email"
-                placeholder={errors.email || "Email"}
-                className={`px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none ${
-                  errors.email ? "border-red-500 bg-red-100" : ""
-                }`}
-              />
-              <textarea
-                name="message"
-                placeholder={errors.message || "Write Message"}
-                className={`px-2 pt-3 bg-white w-full text-gray-800 text-sm border-b border-primary focus:border-secondary outline-none ${
-                  errors.message ? "border-red-500 bg-red-100" : ""
-                }`}
-              ></textarea>
+              {/* Full Name */}
+              <div className="">
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder={"Full Name"}
+                  className={`px-2 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none outline-none rounded-xl ${
+                    errors.name ? " outline-red-500 outline-1  bg-gray-50" : ""
+                  }`}
+                />
+                {errors.name ? (
+                  <div className="outline-red-500 outline-1  bg-gray-50 pt-1">
+                    {" "}
+                    <p className=" mx-2 w-full text-red-500 text-xs">
+                      {errors.name}
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              {/* Phone Number */}
+              <div className="">
+                <input
+                  type="text"
+                  name="user_phone"
+                  placeholder={"Phone Number"}
+                  className={`px-2 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none outline-none rounded-xl ${
+                    errors.phone ? " outline-red-500 outline-1  bg-gray-50" : ""
+                  }`}
+                />
+
+                {errors.phone ? (
+                  <div className="outline-red-500 outline-1  bg-gray-50 pt-1">
+                    {" "}
+                    <p className=" mx-2 w-full text-red-500 text-xs">
+                      {errors.phone}
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              {/* Email */}
+              <div className="">
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder={"Email"}
+                  className={`px-2 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none outline-none rounded-xl ${
+                    errors.email ? " outline-red-500 outline-1  bg--100" : ""
+                  }`}
+                />
+
+                {errors.email ? (
+                  <div className="outline-red-500 outline-1  bg-gray-50 pt-1">
+                    {" "}
+                    <p className=" mx-2 w-full text-red-500 text-xs">
+                      {errors.email}
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              {/* Write Message */}
+              <div className="">
+                <textarea
+                  name="message"
+                  placeholder={"Write Message"}
+                  className={`px-2 py-3 bg-gray-100 w-full text-gray-800 text-sm border-none outline-none rounded-xl ${
+                    errors.message ? " outline-red-500 outline-1  bg--100" : ""
+                  }`}
+                ></textarea>
+
+                {errors.message ? (
+                  <div className="outline-red-500 outline-1  bg-gray-50 pt-1">
+                    {" "}
+                    <p className=" mx-2 w-full text-red-500 text-xs">
+                      {errors.message}
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
             <button
               type="submit"
-              className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-primary hover:bg-secondary transition-all duration-700 ease-in-out text-white"
+              className="mt-8 flex items-center justify-center text-sm w-full rounded-full px-6 py-3 bg-primary hover:bg-secondary transition-all duration-700 ease-in-out text-white"
               disabled={loading}
             >
               {loading ? (
@@ -152,15 +227,16 @@ const ContactUs = () => {
           </form>
         ) : (
           <div>
-            <div class="bg-green-100 border-l-8 mt-4 mb-2 border-green-500 text-green-700 p-2 rounded-lg">
-              <p className="text-lg text-green-500 ">
-                ✅ Message Sent Successfully !
+            <div class="bg-green-100 border-l-8 mt-4 mb-2 border-primary text-primary p-2 rounded-lg">
+              <p className="text-md text-center">
+                {" "}
+                Message Sent Successfully !
               </p>
             </div>
             <div className="flex items-center justify-center">
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="btn-primary w-fit mt-2"
+                className="btn-primary w-fit mt-2 hover:text-primary"
               >
                 Send Another Message
               </button>
