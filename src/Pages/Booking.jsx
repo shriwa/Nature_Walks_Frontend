@@ -15,7 +15,7 @@ const Booking = () => {
         </h2>
       </div>
       <div className="container flex flex-col items-start justify-center mx-auto">
-        <Privacy_Policy />
+        {/* <Privacy_Policy /> */}
         <iframe
           className=" w-full h-[120rem] mt-1"
           src="https://docs.google.com/forms/d/e/1FAIpQLScxDwf2UgGeJw27QZHbOQkjCAHPHG8vp-nA-Ab7FRxWa8ji5Q/viewform?embedded=true"

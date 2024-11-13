@@ -384,7 +384,7 @@ const AboutUs = () => {
         </section>
         {/* vision */}
         <section
-          class="text-center  bg-gray-100 text-gray-800 py-12 px-4"
+          class="text-center  bg-gr text-gray-800 py-12 px-4"
           data-aos="fade-up"
           data-aos-duration="300"
         >
@@ -415,7 +415,7 @@ const AboutUs = () => {
           </p>
         </section>
 
-        <section
+        {/* <section
           className="text-center py-12 px-4"
           data-aos="fade-up"
           data-aos-duration="300"
@@ -433,7 +433,7 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* <section class="bg-gray-100 py-12 px-4">
           <h2 class="text-2xl font-bold text-center">
