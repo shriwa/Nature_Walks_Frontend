@@ -138,54 +138,14 @@ const Gallery = () => {
 
           {/* Slider Control */}
           <div className="flex justify-center items-center space-x-8 mt-8">
-            <div className="swiper-button-prev bg-primary/80  text-white/80 font-bold flex justify-center items-center text-xl w-14 h-14  rounded-full  shadow-lg "></div>
-            <div className="swiper-button-next bg-primary/80 text-white/80 font-bold flex justify-center items-center w-14 h-14 rounded-full shadow-lg"></div>
+            <div className="swiper-button-prev   text-white/80 font-bold flex justify-center items-center text-xl w-14 h-14  rounded-full  shadow-lg "></div>
+            <div className="swiper-button-next  text-white/80 font-bold flex justify-center items-center w-14 h-14 rounded-full shadow-lg"></div>
             <div className="swiper-pagination bg-primary text-primary md:mt-8"></div>
           </div>
           <div className=" flex items-center justify-center gap-80"></div>
         </Swiper>
       </div>
     </section>
-
-    // <div className="relative  lg:max-w-7xl md:max-w-6xl mx-auto">
-    //   <div className="relative">
-    //     <img
-    //       src={slideData[currentIndex].image}
-    //       alt={slideData[currentIndex].title}
-    //       className="w-[80rem] h-[30rem] object-cover rounded-lg"
-    //     />
-    //     <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-    //       <h5 className="text-xl">{slideData[currentIndex].title}</h5>
-    //     </div>
-    //   </div>
-
-    //   {/* Carousel Controls */}
-    //   <button
-    //     onClick={prevSlide}
-    //     className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-black bg-opacity-50 rounded-full hover:bg-opacity-70"
-    //   >
-    //     &#8592;
-    //   </button>
-    //   <button
-    //     onClick={nextSlide}
-    //     className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-black bg-opacity-50 rounded-full hover:bg-opacity-70"
-    //   >
-    //     &#8594;
-    //   </button>
-
-    //   {/* Indicators */}
-    //   <div className="flex justify-center space-x-2 mt-4">
-    //     {slideData.map((_, index) => (
-    //       <button
-    //         key={index}
-    //         className={`w-3 h-3 rounded-full ${
-    //           index === currentIndex ? "bg-black" : "bg-gray-400"
-    //         }`}
-    //         onClick={() => setCurrentIndex(index)}
-    //       />
-    //     ))}
-    //   </div>
-    // </div>
   );
 };
 

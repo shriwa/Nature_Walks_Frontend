@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import { GiFruitTree, GiTrail, GiHiking } from "react-icons/gi";
 import { BsTaxiFrontFill } from "react-icons/bs";
 
-import image_2 from "../../assets/tracking_image_10.png";
-
 import "aos/dist/aos.css";
 import Aos from "aos";
 
@@ -95,7 +93,7 @@ const WhatWeDo = () => {
                 {servicesData.map((service, index) => (
                   <div
                     key={index}
-                    className=" md:flex items-center gap-4 md:gap-8 p-4 md:w-60  bg-gray-00 rounded-xl transform duration-700  sm:border border-none md:mx-auto mx-4 "
+                    className="flex items-center gap-4 md:gap-8 p-4 md:w-60  bg-gray-00 rounded-xl transform duration-700  sm:border border-none md:mx-auto"
                   >
                     <div className="flex justify-center items-center">
                       <service.imgSrc
