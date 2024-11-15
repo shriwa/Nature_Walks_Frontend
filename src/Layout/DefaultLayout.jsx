@@ -1,10 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import ScrollButton from "../Components/ScrollButton";
 import WhatsAppButton from "../Components/WhatsAppButton";
-import Footer_5 from "../Components/Footer/Footer_5";
+import Footer from "../Components/Footer/Footer";
 
 const DefaultLayout = () => {
   return (
@@ -18,7 +17,7 @@ const DefaultLayout = () => {
         <WhatsAppButton />
       </div>
       {/* <Footer /> */}
-      <Footer_5 />
+      <Footer />
     </div>
   );
 };

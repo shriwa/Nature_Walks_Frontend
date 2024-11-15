@@ -2,7 +2,7 @@ import React from "react";
 import ItemsContainer from "./ItemsContainer";
 import SocialMedia from "../SocialMedia";
 
-const Footer_5 = () => {
+const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-700 flex flex-col items-center justify-center ">
       <ItemsContainer />
@@ -26,4 +26,4 @@ const Footer_5 = () => {
   );
 };
 
-export default Footer_5;
+export default Footer;
