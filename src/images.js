@@ -20,7 +20,6 @@ import image_1 from "./assets/Cuisine/image_5.webp";
 // Logos
 import logo from "./assets/logo.jpg";
 import logo_1 from "./assets/logo_1.png";
-import logo_2 from "./assets/logo_3.png";
 
 export const home_gallery = [
   banner_4,
@@ -52,5 +51,4 @@ export const cuisine_gallery = [
 export const logos = {
   logo,
   logo_1,
-  logo_2,
 };

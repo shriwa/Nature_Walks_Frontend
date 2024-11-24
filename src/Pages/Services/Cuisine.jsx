@@ -2,12 +2,11 @@ import React from "react";
 import Services from "../../Components/Home/Services";
 import Banner_2 from "../../Components/Home/Banner_2";
 
-import image_3 from "../../assets/Cuisine//image_3.jpg";
-import image_4 from "../../assets/Cuisine//image_4.jpg";
-import image_5 from "../../assets/Cuisine/image_5.webp";
-import image_6 from "../../assets/Cuisine/image_6.jpg";
-import { cuisine_gallery } from "../../images";
-import Gallery_2 from "../../Components/Gallery/Gallery_2";
+import image_3 from "../../assets/Cuisine//image_7.jpg";
+import image_4 from "../../assets/Cuisine//image_17.jpg";
+import image_5 from "../../assets/Cuisine/image_16.jpg";
+import image_6 from "../../assets/Cuisine/image_13.jpg";
+import image_7 from "../../assets/Cuisine/image_14.jpg";
 
 const bannerImages = [
   {
@@ -28,6 +27,11 @@ const bannerImages = [
   {
     name: "Banner 4",
     img: image_4,
+    link: "#",
+  },
+  {
+    name: "Banner 5",
+    img: image_7,
     link: "#",
   },
 ];

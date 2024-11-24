@@ -18,13 +18,16 @@ const Banner_2 = ({
       <Swiper
         loop={true}
         spaceBetween={spaceBetween}
-        navigation={true}
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
         autoplay={{ delay: autoplayDelay }}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
           640: { slidesPerView: 1, spaceBetween: 20 },
           1024: { slidesPerView: slidesPerView, spaceBetween: 1 },
+        }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         }}
       >
         {images.map((image, index) => (
@@ -39,6 +42,13 @@ const Banner_2 = ({
             </div>
           </SwiperSlide>
         ))}
+        {/* Slider Control */}
+        <div className="flex justify-center items-center space-x-8 mt-8">
+          <div className="swiper-button-prev   text-white/80 font-bold flex justify-center items-center text-xl w-14 h-14  rounded-full  shadow-lg "></div>
+          <div className="swiper-button-next  text-white/80 font-bold flex justify-center items-center w-14 h-14 rounded-full shadow-lg"></div>
+          <div className="swiper-pagination bg-primary text-primary md:mt-8"></div>
+        </div>
+        <div className=" flex items-center justify-center gap-80"></div>
       </Swiper>
     </>
   );

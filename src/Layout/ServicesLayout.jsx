@@ -8,7 +8,7 @@ import Banner_2 from "../Components/Home/Banner_2";
 const ServicesLayout = ({ title, description, servicesDetails }) => {
   return (
     <div className="">
-      <div className="sm:max-w-xl mx-auto md:max-w-full lg:max-w-screen-2xl px-4 mt-4">
+      <div className="sm:max-w-xl mx-auto md:max-w-full lg:max-w-screen-2xl px-4 mt-0">
         <div className="md:flex items-center justify-center gap-2 mx-auto mb-4 ">
           <div className="bg-gray-100">
             <div className="container mx-auto flex flex-col items-center py-12 sm:py-12">

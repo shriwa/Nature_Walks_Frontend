@@ -30,42 +30,7 @@ const WhatWeDo = () => {
     Aos.init();
   });
 
-  // md:rounded-tl-full rounded-br-3xl rounded-tl-3xl
-
   return (
-    // <section
-    //   className="text-gray-700 body-font md:bg-primary md:mt-8 mt-4 mx-4 md:rounded-full rounded-lg "
-    //   data-aos="fade-up"
-    //   data-aos-duration="500"
-    // >
-    // <div className="container md:px-20 py-0 mx-auto">
-    //   <div className="grid md:gap-0 gap-4 grid-cols-2 md:grid-cols-4 px-2">
-    //     {servicesData.map((service, index) => (
-    //       <div
-    //         key={index}
-    //         className="p-4 md:w-52  rounded-xl transform duration-700 hover:scale-[102%]  sm:border border-none md:mx-auto mx-4 md:bg-transparent bg-primary"
-    //       >
-    //         <div className="flex justify-center items-center">
-    //           {/* <img
-    //             src={service.imgSrc}
-    //             className="md:w-32 md:h-32 w-12 h-12 mb-3"
-    //             alt={service.title}
-    //           /> */}
-
-    //           <service.imgSrc
-    //             className="md:w-20 md:h-20 w-12 h-12 mb-3 "
-    //             color="white"
-    //           />
-    //         </div>
-    //         <h2 className="title-font font-semibold md:text-xl text-sm text-gray-100 text-center">
-    //           {service.title}
-    //         </h2>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
-    // </section>
-
     <section
       id="about"
       classNameName="md:mt-12 py-8 relative"

@@ -1,16 +1,6 @@
 import React, { useEffect } from "react";
 import video from "../../assets/background_1.mp4";
-
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaWhatsappSquare,
-} from "react-icons/fa";
 import SocialMedia from "../SocialMedia";
-
-import banner_image from "../../assets/Banner/main.jpg";
-
-import { logos } from "../../images";
 
 import "aos/dist/aos.css";
 import Aos from "aos";

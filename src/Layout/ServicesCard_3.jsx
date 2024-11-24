@@ -33,7 +33,7 @@ const ServicesCard_3 = ({ details }) => {
 
   return (
     <div
-      className="md:mb-0 mb-8 bg-gray-800 p-2 rounded-lg"
+      className="mb-0 bg-gray-800 p-2 rounded-lg"
       data-aos="fade-up"
       data-aos-duration="300"
     >

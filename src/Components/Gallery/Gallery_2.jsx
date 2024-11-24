@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
 
 import { SwiperPagination } from "./SwiperPagination";
-import { SwiperNavButtons } from "./SwiperNavButton";
 
 const Gallery_2 = ({
   images = [],

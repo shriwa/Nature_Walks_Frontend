@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import logo_1 from "../assets/logo_1.png";
-import logo_3 from "../assets/logo_3.png";
 
 import tuk_tuk from "../assets/Services/tuk_tuk_2.png";
 import trekking from "../assets/Services/trekking_2.png";
@@ -70,7 +69,7 @@ const Navbar = () => {
     <div>
       {/* Top Bar */}
       <div
-        className={`fixed w-full top-0 z-[999] transition-all duration-200 text-primary
+        className={`fixed w-full top-0 z-[999] transition-all duration-200 text-primary 
     ${scrolled ? "bg-gray-50 shadow-2xl  transform " : ""} 
    `}
       >
@@ -80,29 +79,17 @@ const Navbar = () => {
               className={`flex flex-row items-center md:justify-around  justify-between max-w-scr mx-auto p-3 md:px-6 lg:px-8 transition-all duration-300  ${
                 scrolled
                   ? "md:gap-20 md:px-8 mt-0 bg-none"
-                  : "gap-4 md:mt-0 mt-0 md:bg-gray-50/70 "
+                  : "gap-4 md:mt-0 mt-0 bg-gray-50/70 "
               }`}
             >
               <div className=" flex items-center justify-center  md:gap-8">
                 <a href="/">
                   <img src={logo_1} alt="" className="h-20 rounded-md " />
                 </a>
-                {/* <a href="/">
-                  <img src={logo_3} alt="" className="h-44 rounded-md" />
-                </a> */}
+
                 <a href="/" className="md:text-3xl text-xl font-bold ">
                   Lanka Nature Walks
                 </a>
-
-                {/* <a href="/" className="text-[20px] md:text-3xl font-semibold">
-                  <span className="block text-white md:text-5xl font-extrabold relative">
-                    Lanka
-                    <span className="absolute inset-0 text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]"></span>
-                  </span>
-                  <span className="block text-green-500 text-2xl md:text-4xl font-medium">
-                    Nature Walks
-                  </span>
-                </a> */}
               </div>
               {/* Show menu button only on small screens */}
               <button
@@ -148,11 +135,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Sidebar for small screens */}
+      {/* Navbar for small screens */}
       <div
         className={`fixed top-0 left-0 bg-white  text-primary  transition-transform transform duration-500 ease-in-out  ${
           menuOpen ? "translate-x-0" : "-translate-y-full"
-        } z-[998] w-full  md:hidden rounded-b-md`}
+        } z-[998] w-full h-5/6 md:hidden rounded-b-md`}
       >
         <div className="flex flex-col items-center justify-evenly mt-28 gap-4 ">
           <nav className="grid grid-cols-1 gap-2 p-4">
